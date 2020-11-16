@@ -40,8 +40,10 @@ function mapDispatchToProps (dispatch) {
 }
 
 function mergeProps (stateProps, { dispatch }, ownProps) {
+  log('mergeProps')
+
   const {
-    items
+    items = []
   } = stateProps
 
   const {

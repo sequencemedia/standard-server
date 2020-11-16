@@ -11,7 +11,7 @@ export {
 /*
  *  `sort` duplicates the array to preserve the order of the original
  */
-export default function transform (order, items) {
+export default function transform (order = 'by-none', items = []) {
   switch (order) {
     case 'by-name':
       return [...items].sort(byName)
