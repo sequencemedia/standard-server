@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`shinkansen-cogs/cogs/checkbox <Component /> With additional props renders 1`] = `
+<div
+  className="MOCK FEED TYPE"
+>
+  <h3>
+    New Releases
+  </h3>
+  <Order
+    feedType="MOCK FEED TYPE"
+    onClick={[Function]}
+    order="MOCK ORDER"
+  />
+  <Reset
+    feedType="MOCK FEED TYPE"
+    onClick={[Function]}
+    order="MOCK ORDER"
+  />
+  <GetLatest
+    feedType="MOCK FEED TYPE"
+    onClick={[Function]}
+    order="MOCK ORDER"
+  />
+  <GetLatestOrderBy
+    feedType="MOCK FEED TYPE"
+    onClick={[Function]}
+    order="MOCK ORDER"
+  />
+  <Albums
+    items={
+      Array [
+        Object {
+          "artistName": "MOCK ARTIST NAME",
+          "artistUrl": "MOCK ARTIST URL",
+          "artworkUrl100": "MOCK ARTWORK URL 100",
+          "copyright": "MOCK COPYRIGHT",
+          "kind": "MOCK KIND",
+          "name": "MOCK NAME",
+          "releaseDate": "2020-11-16",
+          "url": "MOCK URL",
+        },
+      ]
+    }
+  />
+</div>
+`;
+
+exports[`shinkansen-cogs/cogs/checkbox <Component /> With required props renders 1`] = `
+<div
+  className="MOCK FEED TYPE"
+>
+  <h3>
+    New Releases
+  </h3>
+  <Order
+    feedType="MOCK FEED TYPE"
+    onClick={[Function]}
+    order="by-none"
+  />
+  <Reset
+    feedType="MOCK FEED TYPE"
+    onClick={[Function]}
+    order="by-none"
+  />
+  <GetLatest
+    feedType="MOCK FEED TYPE"
+    onClick={[Function]}
+    order="by-none"
+  />
+  <GetLatestOrderBy
+    feedType="MOCK FEED TYPE"
+    onClick={[Function]}
+    order="by-none"
+  />
+  <Albums
+    items={Array []}
+  />
+</div>
+`;

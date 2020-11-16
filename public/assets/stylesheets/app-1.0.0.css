@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box
+}
+
+body {
+  font-family: gill-sans-nova,sans-serif;
+  font-weight: 300;
+  font-style: normal
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 400
+}
+
+a {
+  color: #900
+}
+
+a:hover {
+  color: red
+}
+
+a:visited {
+  color: #000
+}
+
+ol.albums,
+ol.songs {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  border: none
+}
+
+ol.albums li,
+ol.songs li {
+  display: block;
+  margin: 2rem 0
+}
+
+ol.albums li .album,
+ol.albums li .artist,
+ol.albums li .song,
+ol.songs li .album,
+ol.songs li .artist,
+ol.songs li .song {
+  width: 200px;
+  margin: 0 auto
+}
+
+ol.albums li .album img,
+ol.albums li .artist img,
+ol.albums li .song img,
+ol.songs li .album img,
+ol.songs li .artist img,
+ol.songs li .song img {
+  width: 200px;
+  height: 200px
+}
+
+ol.albums li .album a.name span,
+ol.albums li .artist a.name span,
+ol.albums li .song a.name span,
+ol.songs li .album a.name span,
+ol.songs li .artist a.name span,
+ol.songs li .song a.name span {
+  display: block;
+  text-transform: uppercase;
+  font-weight: 700
+}
+
+ol.albums li .album a.artist-name span,
+ol.albums li .artist a.artist-name span,
+ol.albums li .song a.artist-name span,
+ol.songs li .album a.artist-name span,
+ol.songs li .artist a.artist-name span,
+ol.songs li .song a.artist-name span {
+  display: block
+}
+
+ol.albums li .release-date,
+ol.songs li .release-date {
+  display: block;
+  text-align: center;
+  font-weight: 700;
+  line-height: 2rem
+}
+
+ol.albums li .copyright,
+ol.songs li .copyright {
+  display: block;
+  text-align: center;
+  font-weight: 300;
+  font-size: .75rem
+}
+
+ol.playlists {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  border: none
+}
+
+ol.playlists li {
+  display: block;
+  margin: 2rem 0
+}
+
+ol.playlists li .playlist {
+  width: 200px;
+  margin: 0 auto
+}
+
+ol.playlists li .playlist img {
+  width: 200px;
+  height: 200px
+}
+
+ol.playlists li .playlist a.name span {
+  display: block;
+  text-transform: uppercase;
+  font-weight: 700
+}
+/*# sourceMappingURL=app-1.0.0.css.map */

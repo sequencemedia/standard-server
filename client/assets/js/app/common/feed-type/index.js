@@ -1,0 +1,5 @@
+export const TOP_ALBUMS = 'top-albums'
+export const TOP_SONGS = 'top-songs'
+export const HOT_TRACKS = 'hot-tracks'
+export const NEW_RELEASES = 'new-releases'
+export const COMING_SOON = 'coming-soon'

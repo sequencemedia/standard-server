@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`shinkansen-cogs/cogs/checkbox <Component /> With additional props renders 1`] = `
+<div
+  className="MOCK FEED TYPE"
+>
+  <h3>
+    Hot Tracks
+  </h3>
+  <Order
+    feedType="MOCK FEED TYPE"
+    onClick={[Function]}
+    order="MOCK ORDER"
+  />
+  <Reset
+    feedType="MOCK FEED TYPE"
+    onClick={[Function]}
+    order="MOCK ORDER"
+  />
+  <Playlists
+    items={
+      Array [
+        Object {
+          "artworkUrl100": "MOCK ARTWORK URL 100",
+          "kind": "MOCK KIND",
+          "name": "MOCK NAME",
+          "url": "MOCK URL",
+        },
+      ]
+    }
+  />
+</div>
+`;
+
+exports[`shinkansen-cogs/cogs/checkbox <Component /> With required props renders 1`] = `
+<div
+  className="MOCK FEED TYPE"
+>
+  <h3>
+    Hot Tracks
+  </h3>
+  <Order
+    feedType="MOCK FEED TYPE"
+    onClick={[Function]}
+    order="by-none"
+  />
+  <Reset
+    feedType="MOCK FEED TYPE"
+    onClick={[Function]}
+    order="by-none"
+  />
+  <Playlists
+    items={Array []}
+  />
+</div>
+`;
