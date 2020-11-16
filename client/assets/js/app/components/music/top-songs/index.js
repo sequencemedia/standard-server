@@ -23,7 +23,7 @@ import transform from '@sequencemedia/app/transformers/order'
 
 import Component from './component'
 
-const log = debug('@sequencemedia/app:components:music:top-songs')
+const log = debug('@sequencemedia:client:app:components:music:top-songs')
 
 log('`topSongs` is awake')
 

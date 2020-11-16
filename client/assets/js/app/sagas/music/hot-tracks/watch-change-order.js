@@ -14,7 +14,7 @@ import {
 
 import * as api from '@sequencemedia/api/music'
 
-const log = debug('@sequencemedia/app:sagas:music:hot-tracks')
+const log = debug('@sequencemedia:client:app:sagas:music:hot-tracks')
 
 log('`watchChangeOrder` is awake')
 

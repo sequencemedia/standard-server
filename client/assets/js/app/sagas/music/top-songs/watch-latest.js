@@ -14,7 +14,7 @@ import {
 
 import * as api from '@sequencemedia/api/music'
 
-const log = debug('@sequencemedia/app:sagas:music:top-songs')
+const log = debug('@sequencemedia:client:app:sagas:music:top-songs')
 
 log('`watchLatest` is awake')
 

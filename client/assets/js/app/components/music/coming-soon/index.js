@@ -23,7 +23,7 @@ import transform from '@sequencemedia/app/transformers/order'
 
 import Component from './component'
 
-const log = debug('@sequencemedia/app:components:music:coming-soon')
+const log = debug('@sequencemedia:client:app:components:music:coming-soon')
 
 log('`comingSoon` is awake')
 

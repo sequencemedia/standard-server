@@ -1,6 +1,6 @@
 import debug from 'debug'
 
-const log = debug('@sequencemedia/app:actions:music:top-albums')
+const log = debug('@sequencemedia:client:app:actions:music:top-albums')
 
 log('`topAlbums` is awake')
 

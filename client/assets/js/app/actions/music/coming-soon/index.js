@@ -1,6 +1,6 @@
 import debug from 'debug'
 
-const log = debug('@sequencemedia/app:actions:music:coming-soon')
+const log = debug('@sequencemedia:client:app:actions:music:coming-soon')
 
 log('`comingSoon` is awake')
 

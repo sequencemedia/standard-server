@@ -15,7 +15,7 @@ import {
 
 import Component from './component'
 
-const log = debug('@sequencemedia/app:components:music')
+const log = debug('@sequencemedia:client:app:components:music')
 
 log('`music` is awake')
 

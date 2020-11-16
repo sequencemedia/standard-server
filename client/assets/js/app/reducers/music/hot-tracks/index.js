@@ -28,7 +28,7 @@ import {
   LATEST_ORDER_REJECTED
 } from '@sequencemedia/app/actions/music/hot-tracks'
 
-const log = debug('@sequencemedia/app:reducers:music:hot-tracks')
+const log = debug('@sequencemedia:client:app:reducers:music:hot-tracks')
 
 log('`hotTracks` is awake')
 

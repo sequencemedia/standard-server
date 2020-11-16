@@ -1,6 +1,8 @@
 import debug from 'debug'
 
-const log = debug('@sequencemedia/app:actions:music')
+const log = debug('@sequencemedia:client:app:actions:music')
+
+log('`music` is awake')
 
 const CHANGE = 'MUSIC_CHANGE'
 const CHANGE_ORDER = 'MUSIC_CHANGE_ORDER'

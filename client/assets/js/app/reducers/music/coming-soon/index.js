@@ -28,7 +28,7 @@ import {
   LATEST_ORDER_REJECTED
 } from '@sequencemedia/app/actions/music/coming-soon'
 
-const log = debug('@sequencemedia/app:reducers:music:coming-soon')
+const log = debug('@sequencemedia:client:app:reducers:music:coming-soon')
 
 log('`comingSoon` is awake')
 

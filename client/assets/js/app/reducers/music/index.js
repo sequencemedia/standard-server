@@ -5,7 +5,7 @@ import {
   CHANGE_ORDER
 } from '@sequencemedia/app/actions/music'
 
-const log = debug('@sequencemedia/app:reducers:music')
+const log = debug('@sequencemedia:client:app:reducers:music')
 
 log('`music` is awake')
 

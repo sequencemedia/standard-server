@@ -28,7 +28,7 @@ import {
   LATEST_ORDER_REJECTED
 } from '@sequencemedia/app/actions/music/top-songs'
 
-const log = debug('@sequencemedia/app:reducers:music:top-songs')
+const log = debug('@sequencemedia:client:app:reducers:music:top-songs')
 
 log('`topSongs` is awake')
 
