@@ -9,9 +9,9 @@ import IndexPage from '@sequencemedia/app/components/index-page'
 export default (
   <Switch>
     <Route exact path='/' component={IndexPage} />
-    <Route exact path='/:music' component={IndexPage} />
-    <Route exact path='/:music/:order' component={IndexPage} />
-    <Route exact path='/latest/:music' component={IndexPage} />
-    <Route exact path='/latest/:music/:order' component={IndexPage} />
+    <Route exact path='/latest/:feedType' component={IndexPage} />
+    <Route exact path='/latest/:feedType/:order' component={IndexPage} />
+    <Route exact path='/:feedType' component={IndexPage} />
+    <Route exact path='/:feedType/:order' component={IndexPage} />
   </Switch>
 )

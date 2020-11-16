@@ -13,11 +13,13 @@ import {
   changeOrder,
   latest,
   latestOrder
-} from '@sequencemedia/app/actions/music'
+} from '@sequencemedia/app/actions/music/coming-soon'
 
 import {
   COMING_SOON
-} from '@sequencemedia/app/common/feed-type'
+} from '@sequencemedia/app/constants/feed-type'
+
+import transform from '@sequencemedia/app/transformers/order'
 
 import Component from './component'
 
@@ -40,21 +42,37 @@ function mapDispatchToProps (dispatch) {
 function mergeProps (stateProps, { dispatch }, ownProps) {
   log('mergeProps')
 
+  const {
+    items
+  } = stateProps
+
+  const {
+    match: {
+      params: {
+        feedType,
+        order
+      }
+    }
+  } = ownProps
+
   return {
     ...stateProps,
-    onClickReset (feedType) {
+    onMount (feedType) {
       dispatch(change(feedType))
     },
-    onClickOrder (feedType, order) {
+    onMountOrderBy (feedType, order) {
       dispatch(changeOrder(feedType, order))
     },
-    onClickGetLatest (feedType) {
+    onClickLatest (feedType) {
       dispatch(latest(feedType))
     },
-    onClickGetLatestOrderBy (feedType, order) {
+    onClickLatestOrderBy (feedType, order) {
       dispatch(latestOrder(feedType, order))
     },
-    ...ownProps
+    ...ownProps,
+    items: transform(order, items),
+    feedType,
+    order
   }
 }
 

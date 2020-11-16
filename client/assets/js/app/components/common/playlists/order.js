@@ -7,16 +7,16 @@ import {
 
 import {
   BY_NAME
-} from '@sequencemedia/app/common/order'
+} from '@sequencemedia/app/constants/order'
 
 import getLinkToOrderBy from '@sequencemedia/app/components/common/get-link-to-order-by'
 
-function Order ({ feedType, onClick }) {
+function Order ({ feedType }) {
   return (
     <div className='order'>
       Order by
       {' '}
-      <Link className='order-by-name' to={getLinkToOrderBy(feedType, BY_NAME)} onClick={() => onClick(BY_NAME)}>
+      <Link className='order-by-name' to={getLinkToOrderBy(feedType, BY_NAME)}>
         name
       </Link>
     </div>
@@ -24,8 +24,7 @@ function Order ({ feedType, onClick }) {
 }
 
 Order.propTypes = {
-  feedType: PropTypes.string.isRequired,
-  onClick: PropTypes.func.isRequired
+  feedType: PropTypes.string.isRequired
 }
 
 export default Order

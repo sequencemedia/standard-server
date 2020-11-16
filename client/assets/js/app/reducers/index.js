@@ -8,7 +8,7 @@ import {
   HOT_TRACKS,
   NEW_RELEASES,
   COMING_SOON
-} from '@sequencemedia/app/common/feed-type'
+} from '@sequencemedia/app/constants/feed-type'
 
 import music from './music'
 import topAlbums from './music/top-albums'

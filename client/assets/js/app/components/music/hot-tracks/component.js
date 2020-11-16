@@ -1,37 +1,50 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
+
+import {
+  HOT_TRACKS
+} from '@sequencemedia/app/constants/feed-type'
 
 import Order from '@sequencemedia/app/components/common/playlists/order'
 import Reset from '@sequencemedia/app/components/common/playlists/reset'
 
 import Playlists from '@sequencemedia/app/components/common/playlists'
 
-const Component = ({ feedType, order, items, onClickOrder, onClickReset, onClickGetLatest, onClickGetLatestOrderBy }) => (
-  <div className={feedType}>
-    <h3>
-      Hot Tracks
-    </h3>
+const Component = ({ feedType, order, items, onMount, onMountOrderBy, onClickLatest, onClickLatestOrderBy }) => {
+  useEffect(() => {
+    return (order === 'by-none')
+      ? onMount(feedType)
+      : onMountOrderBy(feedType, order)
+  }, [])
 
-    <Order feedType={feedType} order={order} onClick={(order) => onClickOrder(feedType, order)} />
-    <Reset feedType={feedType} order={order} onClick={() => onClickReset(feedType)} />
+  return (
+    <div className={feedType}>
+      <h3>
+        Hot Tracks
+      </h3>
 
-    <Playlists items={items} />
-  </div>
-)
+      <Order feedType={feedType} order={order} />
+      <Reset feedType={feedType} order={order} />
+
+      <Playlists items={items} />
+    </div>
+  )
+}
 
 Component.defaultProps = {
+  feedType: HOT_TRACKS,
   order: 'by-none',
   items: []
 }
 
 Component.propTypes = {
-  feedType: PropTypes.string.isRequired,
+  feedType: PropTypes.string,
   order: PropTypes.string,
   items: PropTypes.array,
-  onClickOrder: PropTypes.func.isRequired,
-  onClickReset: PropTypes.func.isRequired,
-  onClickGetLatest: PropTypes.func.isRequired,
-  onClickGetLatestOrderBy: PropTypes.func.isRequired
+  onMount: PropTypes.func.isRequired,
+  onMountOrderBy: PropTypes.func.isRequired,
+  onClickLatest: PropTypes.func.isRequired,
+  onClickLatestOrderBy: PropTypes.func.isRequired
 }
 
 export default Component

@@ -4,11 +4,11 @@ import {
   PENDING,
   RESOLVED,
   REJECTED
-} from '@sequencemedia/app/common'
+} from '@sequencemedia/app/constants'
 
 import {
   TOP_SONGS
-} from '@sequencemedia/app/common/feed-type'
+} from '@sequencemedia/app/constants/feed-type'
 
 import {
   CHANGE,

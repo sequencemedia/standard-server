@@ -9,7 +9,8 @@ import {
 } from 'react-router'
 
 import {
-  change
+  change,
+  changeOrder
 } from '@sequencemedia/app/actions/music'
 
 import Component from './component'
@@ -33,12 +34,26 @@ function mapDispatchToProps (dispatch) {
 function mergeProps (stateProps, { dispatch }, ownProps) {
   log('mergeProps')
 
+  const {
+    match: {
+      params: {
+        feedType = 'top-albums',
+        order = 'by-none'
+      }
+    }
+  } = ownProps
+
   return {
     ...stateProps,
     onChange (feedType) {
       dispatch(change(feedType))
     },
-    ...ownProps
+    onChangeOrderBy (feedType, order) {
+      dispatch(changeOrder(feedType, order))
+    },
+    ...ownProps,
+    feedType,
+    order
   }
 }
 

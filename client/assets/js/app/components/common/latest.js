@@ -6,8 +6,9 @@ import {
 } from 'react-router-dom'
 
 import getLatestLinkTo from './get-latest-link-to'
+import getLatestLinkToOrderBy from './get-latest-link-to-order-by'
 
-function GetLatest ({ feedType, order, onClick }) {
+function Latest ({ feedType, order, onClick }) {
   if (order === 'by-none') {
     return (
       <div className='get-latest'>
@@ -18,13 +19,19 @@ function GetLatest ({ feedType, order, onClick }) {
     )
   }
 
-  return null
+  return (
+    <div className='get-latest-order-by'>
+      <Link to={getLatestLinkToOrderBy(feedType, order)} onClick={onClick}>
+        Get latest
+      </Link>
+    </div>
+  )
 }
 
-GetLatest.propTypes = {
+Latest.propTypes = {
   feedType: PropTypes.string.isRequired,
   order: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired
 }
 
-export default GetLatest
+export default Latest

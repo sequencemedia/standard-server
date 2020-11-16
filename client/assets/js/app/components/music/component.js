@@ -12,16 +12,12 @@ import TabSet, {
 } from 'react-tab-set'
 
 import {
-  PENDING
-} from '@sequencemedia/app/common'
-
-import {
   TOP_ALBUMS,
   TOP_SONGS,
   HOT_TRACKS,
   NEW_RELEASES,
   COMING_SOON
-} from '@sequencemedia/app/common/feed-type'
+} from '@sequencemedia/app/constants/feed-type'
 
 import TopAlbums from './top-albums'
 import TopSongs from './top-songs'
@@ -31,8 +27,14 @@ import ComingSoon from './coming-soon'
 
 import getLinkTo from '@sequencemedia/app/components/common/get-link-to'
 
-const Music = ({ feedType, order, onChange }) => (
-  <TabSet selectedTab={feedType} onChange={onChange}>
+const Music = ({ feedType, order, onChange, onChangeOrderBy }) => (
+  <TabSet
+    selectedTab={feedType}
+    onChange={() => {
+      (order === 'by-none')
+        ? onChange(feedType)
+        : onChangeOrderBy(feedType, order)
+    }}>
     <TabGroup>
       <Tab tab={TOP_ALBUMS}>
         <Link to={getLinkTo(TOP_ALBUMS)}>
@@ -80,15 +82,14 @@ const Music = ({ feedType, order, onChange }) => (
 
 Music.defaultProps = {
   feedType: TOP_ALBUMS,
-  order: 'by-none',
-  status: PENDING
+  order: 'by-none'
 }
 
 Music.propTypes = {
   feedType: PropTypes.string,
   order: PropTypes.string,
-  status: PropTypes.number,
-  onChange: PropTypes.func.isRequired
+  onChange: PropTypes.func.isRequired,
+  onChangeOrderBy: PropTypes.func.isRequired
 }
 
 export default Music

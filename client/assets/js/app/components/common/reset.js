@@ -7,11 +7,11 @@ import {
 
 import getLinkTo from './get-link-to'
 
-function Reset ({ feedType, order, onClick }) {
+function Reset ({ feedType, order }) {
   if (order !== 'by-none') {
     return (
       <div className='reset'>
-        <Link to={getLinkTo(feedType)} onClick={onClick}>
+        <Link to={getLinkTo(feedType)}>
           Reset
         </Link>
       </div>
@@ -23,8 +23,7 @@ function Reset ({ feedType, order, onClick }) {
 
 Reset.propTypes = {
   feedType: PropTypes.string.isRequired,
-  order: PropTypes.string.isRequired,
-  onClick: PropTypes.func.isRequired
+  order: PropTypes.string.isRequired
 }
 
 export default Reset

@@ -18,9 +18,9 @@ export default function getApiRoutes () {
   return [
     {
       method: 'GET',
-      path: '/api/change/{feedType}',
+      path: '/api/change/{feedType?}',
       async handler ({ pre: { uid }, params: { feedType = 'top-albums' } }) {
-        log('/api/change/{feedType}')
+        log('/api/change/{feedType?}')
 
         try {
           /*
@@ -59,7 +59,7 @@ export default function getApiRoutes () {
     {
       method: 'GET',
       path: '/api/change/{feedType}/{order}',
-      async handler ({ pre: { uid }, params: { feedType = 'top-albums', order = 'by-none' } }) {
+      async handler ({ pre: { uid }, params: { feedType, order } }) {
         log('/api/change/{feedType}/{order}')
 
         try {
@@ -98,9 +98,9 @@ export default function getApiRoutes () {
     },
     {
       method: 'GET',
-      path: '/api/latest/{feedType}',
+      path: '/api/latest/{feedType?}',
       async handler ({ pre: { uid }, params: { feedType = 'top-albums' } }) {
-        log('/api/latest/{feedType}')
+        log('/api/latest/{feedType?}')
 
         try {
           /*
@@ -137,7 +137,7 @@ export default function getApiRoutes () {
     {
       method: 'GET',
       path: '/api/latest/{feedType}/{order}',
-      async handler ({ pre: { uid }, params: { feedType = 'top-albums', order = 'by-none' } }) {
+      async handler ({ pre: { uid }, params: { feedType, order } }) {
         log('/api/latest/{feedType}/{order}')
 
         try {

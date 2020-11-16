@@ -54,54 +54,6 @@ export default function getAppRoutes (uri = 'http://localhost:5000') {
   return [
     {
       method: 'GET',
-      path: '/{feedType?}',
-      handler ({ pre: { uid }, params: { feedType = 'top-albums' }, url: { pathname = '/' } }, h) {
-        log('/{feedType?}')
-
-        return (
-          fetch(`${uri}/api/change/${feedType}`, {
-            headers: {
-              authorization: `Bearer: ${uid}`
-            }
-          })
-            .then((response) => response.json())
-            .then(renderFeedTypeFor(pathname))
-            .then((context) => h.view('index', context))
-            .catch(handleError)
-        )
-      },
-      config: {
-        pre: [
-          uid
-        ]
-      }
-    },
-    {
-      method: 'GET',
-      path: '/{feedType}/{order}',
-      handler ({ pre: { uid }, params: { feedType = 'top-albums', order = 'by-none' }, url: { pathname = '/' } }, h) {
-        log('/{feedType}/{order}')
-
-        return (
-          fetch(`${uri}/api/change/${feedType}/${order}`, {
-            headers: {
-              authorization: `Bearer: ${uid}`
-            }
-          })
-            .then((response) => response.json())
-            .then(renderFeedTypeOrderFor(pathname))
-            .then((context) => h.view('index', context))
-            .catch(handleError)
-        )
-      },
-      config: {
-        pre: [
-          uid
-        ]
-      }
-    },
-    {
-      method: 'GET',
       path: '/latest/{feedType?}',
       handler ({ pre: { uid }, params: { feedType = 'top-albums' }, url: { pathname = '/' } }, h) {
         log('/latest/{feedType?}')
@@ -127,11 +79,59 @@ export default function getAppRoutes (uri = 'http://localhost:5000') {
     {
       method: 'GET',
       path: '/latest/{feedType}/{order}',
-      handler ({ pre: { uid }, params: { feedType = 'top-albums', order = 'by-none' }, url: { pathname = '/' } }, h) {
+      handler ({ pre: { uid }, params: { feedType, order }, url: { pathname = '/' } }, h) {
         log('/latest/{feedType}/{order}')
 
         return (
           fetch(`${uri}/api/latest/${feedType}/${order}`, {
+            headers: {
+              authorization: `Bearer: ${uid}`
+            }
+          })
+            .then((response) => response.json())
+            .then(renderFeedTypeOrderFor(pathname))
+            .then((context) => h.view('index', context))
+            .catch(handleError)
+        )
+      },
+      config: {
+        pre: [
+          uid
+        ]
+      }
+    },
+    {
+      method: 'GET',
+      path: '/{feedType?}',
+      handler ({ pre: { uid }, params: { feedType = 'top-albums' }, url: { pathname = '/' } }, h) {
+        log('/{feedType?}')
+
+        return (
+          fetch(`${uri}/api/change/${feedType}`, {
+            headers: {
+              authorization: `Bearer: ${uid}`
+            }
+          })
+            .then((response) => response.json())
+            .then(renderFeedTypeFor(pathname))
+            .then((context) => h.view('index', context))
+            .catch(handleError)
+        )
+      },
+      config: {
+        pre: [
+          uid
+        ]
+      }
+    },
+    {
+      method: 'GET',
+      path: '/{feedType}/{order}',
+      handler ({ pre: { uid }, params: { feedType, order }, url: { pathname = '/' } }, h) {
+        log('/{feedType}/{order}')
+
+        return (
+          fetch(`${uri}/api/change/${feedType}/${order}`, {
             headers: {
               authorization: `Bearer: ${uid}`
             }
