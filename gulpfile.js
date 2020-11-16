@@ -22,6 +22,12 @@ const {
   transform
 } = require('~/config/gulp/transform')
 
+const {
+  handleError
+} = require('./config/gulp/handle-error')
+
+const clientPath = path.resolve('./client')
+const serverPath = path.resolve('./server')
 const appPath = path.resolve('./app.js')
 
 const {
@@ -72,10 +78,21 @@ gulp
   .task('transform', transform)
 
 gulp
-  .task('server-listen', (next) => server.listen({ path: appPath, args: process.argv.slice(2), execArgs: ['--harmony', '--colors'] }, next))
-
-gulp
   .task('server-restart', (next) => server.restart(next))
 
 gulp
-  .task('default', gulp.parallel('watch', 'server-listen'))
+  .task('server-watch', () => (
+    gulp
+      .watch([
+        clientPath.concat('/**/*'),
+        serverPath.concat('/**/*'),
+        appPath
+      ], { name: 'server-watch' }, gulp.series('build', 'server-restart'))
+      .on('error', handleError)
+  ))
+
+gulp
+  .task('server-listen', (next) => server.listen({ path: appPath, args: process.argv.slice(2), execArgs: ['--harmony', '--colors'] }, next))
+
+gulp
+  .task('default', gulp.parallel('server-watch', 'server-listen'))
