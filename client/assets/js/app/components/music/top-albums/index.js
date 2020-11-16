@@ -11,8 +11,8 @@ import {
 import {
   change,
   changeOrder,
-  update,
-  updateOrder
+  latest,
+  latestOrder
 } from '@sequencemedia/app/actions/music'
 
 import {
@@ -49,10 +49,10 @@ function mergeProps (stateProps, { dispatch }, ownProps) {
       dispatch(changeOrder(feedType, order))
     },
     onClickGetLatest (feedType) {
-      dispatch(update(feedType))
+      dispatch(latest(feedType))
     },
     onClickGetLatestOrderBy (feedType, order) {
-      dispatch(updateOrder(feedType, order))
+      dispatch(latestOrder(feedType, order))
     },
     ...ownProps
   }

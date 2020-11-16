@@ -5,13 +5,13 @@ import {
   Link
 } from 'react-router-dom'
 
-import getLinkToOrderBy from './get-link-to-order-by'
+import getLatestLinkToOrderBy from './get-latest-link-to-order-by'
 
 function GetLatestOrderBy ({ feedType, order, onClick }) {
   if (order !== 'by-none') {
     return (
       <div className='get-latest-order-by'>
-        <Link to={`${getLinkToOrderBy(feedType, order)}/latest`} onClick={onClick}>
+        <Link to={getLatestLinkToOrderBy(feedType, order)} onClick={onClick}>
           Get latest
         </Link>
       </div>

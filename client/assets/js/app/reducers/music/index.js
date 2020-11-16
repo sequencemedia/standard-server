@@ -8,20 +8,20 @@ import {
 
 import {
   CHANGE,
-  UPDATE,
+  LATEST,
 
   CHANGE_ORDER,
-  UPDATE_ORDER,
+  LATEST_ORDER,
 
   CHANGE_FULFILLED,
   CHANGE_ORDER_FULFILLED,
-  UPDATE_FULFILLED,
-  UPDATE_ORDER_FULFILLED,
+  LATEST_FULFILLED,
+  LATEST_ORDER_FULFILLED,
 
   CHANGE_REJECTED,
   CHANGE_ORDER_REJECTED,
-  UPDATE_REJECTED,
-  UPDATE_ORDER_REJECTED
+  LATEST_REJECTED,
+  LATEST_ORDER_REJECTED
 } from '@sequencemedia/app/actions/music'
 
 const log = debug('@sequencemedia/app:reducers:music')
@@ -50,13 +50,13 @@ export const changeOrder = (state = {}, { feedType, order } = {}) => ({ ...state
  *  Get all from state
  *  Set `feedType` from action
  */
-export const update = (state = {}, { feedType } = {}) => ({ ...state, feedType, status: PENDING })
+export const latest = (state = {}, { feedType } = {}) => ({ ...state, feedType, status: PENDING })
 
 /*
  *  Get all from state
  *  Set `feedType` from action
  */
-export const updateOrder = (state = {}, { feedType, order } = {}) => ({ ...state, feedType, order, status: PENDING })
+export const latestOrder = (state = {}, { feedType, order } = {}) => ({ ...state, feedType, order, status: PENDING })
 
 export function changeFulfilled (state = {}, { response: { feedType } = {} } = {}) {
   log('changeFulfilled')
@@ -70,14 +70,14 @@ export function changeOrderFulfilled (state = {}, { response: { feedType, order 
   return { feedType, order, status: RESOLVED }
 }
 
-export function updateFulfilled (state = {}, { response: { feedType } = {} } = {}) {
-  log('updateFulfilled')
+export function latestFulfilled (state = {}, { response: { feedType } = {} } = {}) {
+  log('latestFulfilled')
 
   return { feedType, status: RESOLVED }
 }
 
-export function updateOrderFulfilled (state = {}, { response: { feedType, order } = {} } = {}) {
-  log('updateOrderFulfilled')
+export function latestOrderFulfilled (state = {}, { response: { feedType, order } = {} } = {}) {
+  log('latestOrderFulfilled')
 
   return { feedType, order, status: RESOLVED }
 }
@@ -94,14 +94,14 @@ export function changeOrderRejected ({ feedType, order } = {}, { error = {} } = 
   return { feedType, order, exception: { ...error }, status: REJECTED }
 }
 
-export function updateRejected ({ feedType } = {}, { error = {} } = {}) {
-  log('updateRejected')
+export function latestRejected ({ feedType } = {}, { error = {} } = {}) {
+  log('latestRejected')
 
   return { feedType, exception: { ...error }, status: REJECTED }
 }
 
-export function updateOrderRejected ({ feedType, order } = {}, { error = {} } = {}) {
-  log('updateOrderRejected')
+export function latestOrderRejected ({ feedType, order } = {}, { error = {} } = {}) {
+  log('latestOrderRejected')
 
   return { feedType, order, exception: { ...error }, status: REJECTED }
 }
@@ -122,24 +122,24 @@ export default function musicReducer (state = { ...STATE }, { type, ...action } 
     case CHANGE_ORDER:
 
       return changeOrder(state, action)
-    case UPDATE:
+    case LATEST:
 
-      return update(state, action)
-    case UPDATE_ORDER:
+      return latest(state, action)
+    case LATEST_ORDER:
 
-      return updateOrder(state, action)
+      return latestOrder(state, action)
     case CHANGE_FULFILLED:
 
       return changeFulfilled(state, action)
-    case UPDATE_FULFILLED:
+    case LATEST_FULFILLED:
 
-      return updateFulfilled(state, action)
+      return latestFulfilled(state, action)
     case CHANGE_ORDER_FULFILLED:
 
       return changeOrderFulfilled(state, action)
-    case UPDATE_ORDER_FULFILLED:
+    case LATEST_ORDER_FULFILLED:
 
-      return updateOrderFulfilled(state, action)
+      return latestOrderFulfilled(state, action)
     case CHANGE_REJECTED:
 
       return changeRejected(state, action)
@@ -147,13 +147,13 @@ export default function musicReducer (state = { ...STATE }, { type, ...action } 
     case CHANGE_ORDER_REJECTED:
 
       return changeOrderRejected(state, action)
-    case UPDATE_REJECTED:
+    case LATEST_REJECTED:
 
-      return updateRejected(state, action)
+      return latestRejected(state, action)
 
-    case UPDATE_ORDER_REJECTED:
+    case LATEST_ORDER_REJECTED:
 
-      return updateOrderRejected(state, action)
+      return latestOrderRejected(state, action)
     default:
 
       return state

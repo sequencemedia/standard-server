@@ -11,7 +11,7 @@ export default (
     <Route exact path='/' component={IndexPage} />
     <Route exact path='/:music' component={IndexPage} />
     <Route exact path='/:music/:order' component={IndexPage} />
-    <Route exact path='/:music/latest' component={IndexPage} />
-    <Route exact path='/:music/:order/latest' component={IndexPage} />
+    <Route exact path='/latest/:music' component={IndexPage} />
+    <Route exact path='/latest/:music/:order' component={IndexPage} />
   </Switch>
 )

@@ -1,1 +1,1 @@
-export default (linkTo = '') => `/${linkTo}`
+export default (feedType = '') => `/${feedType}`

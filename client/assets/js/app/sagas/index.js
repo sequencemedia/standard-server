@@ -5,15 +5,15 @@ import {
 import {
   watchChange,
   watchChangeOrder,
-  watchUpdate,
-  watchUpdateOrder
+  watchLatest,
+  watchLatestOrder
 } from './music'
 
 export default function * rootSaga () {
   yield all([
     watchChange(),
     watchChangeOrder(),
-    watchUpdate(),
-    watchUpdateOrder()
+    watchLatest(),
+    watchLatestOrder()
   ])
 }

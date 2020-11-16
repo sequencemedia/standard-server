@@ -1,3 +1,3 @@
 import getLinkTo from './get-link-to'
 
-export default (linkTo = '', orderBy = '') => `${getLinkTo(linkTo)}/${orderBy}`
+export default (feedType = '', orderBy = '') => `${getLinkTo(feedType)}/${orderBy}`

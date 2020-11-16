@@ -102,12 +102,12 @@ export default function getAppRoutes (uri = 'http://localhost:5000') {
     },
     {
       method: 'GET',
-      path: '/{feedType}/latest',
+      path: '/latest/{feedType?}',
       handler ({ pre: { uid }, params: { feedType = 'top-albums' }, url: { pathname = '/' } }, h) {
-        log('/{feedType}/latest')
+        log('/latest/{feedType?}')
 
         return (
-          fetch(`${uri}/api/update/${feedType}`, {
+          fetch(`${uri}/api/latest/${feedType}`, {
             headers: {
               authorization: `Bearer: ${uid}`
             }
@@ -126,12 +126,12 @@ export default function getAppRoutes (uri = 'http://localhost:5000') {
     },
     {
       method: 'GET',
-      path: '/{feedType}/{order}/latest',
+      path: '/latest/{feedType}/{order}',
       handler ({ pre: { uid }, params: { feedType = 'top-albums', order = 'by-none' }, url: { pathname = '/' } }, h) {
-        log('/{feedType}/{order}/latest')
+        log('/latest/{feedType}/{order}')
 
         return (
-          fetch(`${uri}/api/update/${feedType}/${order}`, {
+          fetch(`${uri}/api/latest/${feedType}/${order}`, {
             headers: {
               authorization: `Bearer: ${uid}`
             }

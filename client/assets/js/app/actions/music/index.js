@@ -4,8 +4,8 @@ const log = debug('@sequencemedia/app:actions:music')
 
 const CHANGE = 'MUSIC_CHANGE'
 const CHANGE_ORDER = 'MUSIC_CHANGE_ORDER'
-const UPDATE = 'MUSIC_UPDATE'
-const UPDATE_ORDER = 'MUSIC_UPDATE_ORDER'
+const LATEST = 'MUSIC_LATEST'
+const LATEST_ORDER = 'MUSIC_LATEST_ORDER'
 
 /*
  *  Action Types
@@ -13,19 +13,19 @@ const UPDATE_ORDER = 'MUSIC_UPDATE_ORDER'
 export {
   CHANGE,
   CHANGE_ORDER,
-  UPDATE,
-  UPDATE_ORDER
+  LATEST,
+  LATEST_ORDER
 }
 
 export const CHANGE_FULFILLED = CHANGE.concat('_FULFILLED')
 export const CHANGE_ORDER_FULFILLED = CHANGE.concat('_ORDER_FULFILLED')
-export const UPDATE_FULFILLED = UPDATE.concat('_FULFILLED')
-export const UPDATE_ORDER_FULFILLED = UPDATE.concat('_ORDER_FULFILLED')
+export const LATEST_FULFILLED = LATEST.concat('_FULFILLED')
+export const LATEST_ORDER_FULFILLED = LATEST.concat('_ORDER_FULFILLED')
 
 export const CHANGE_REJECTED = CHANGE.concat('_REJECTED')
 export const CHANGE_ORDER_REJECTED = CHANGE.concat('_ORDER_REJECTED')
-export const UPDATE_REJECTED = UPDATE.concat('_REJECTED')
-export const UPDATE_ORDER_REJECTED = UPDATE.concat('_ORDER_REJECTED')
+export const LATEST_REJECTED = LATEST.concat('_REJECTED')
+export const LATEST_ORDER_REJECTED = LATEST.concat('_ORDER_REJECTED')
 
 /*
  *  Action Creators
@@ -85,57 +85,57 @@ export function changeOrderRejected (error) {
   }
 }
 
-export function update (feedType) {
-  log('update')
+export function latest (feedType) {
+  log('latest')
 
   return {
-    type: UPDATE,
+    type: LATEST,
     feedType
   }
 }
 
-export function updateFulfilled (response) {
-  log('updateFulfilled')
+export function latestFulfilled (response) {
+  log('latestFulfilled')
 
   return {
-    type: UPDATE_FULFILLED,
+    type: LATEST_FULFILLED,
     response
   }
 }
 
-export function updateRejected (error) {
-  log('updateRejected')
+export function latestRejected (error) {
+  log('latestRejected')
 
   return {
-    type: UPDATE_REJECTED,
+    type: LATEST_REJECTED,
     error
   }
 }
 
-export function updateOrder (feedType, order) {
-  log('updateOrder')
+export function latestOrder (feedType, order) {
+  log('latestOrder')
 
   return {
-    type: UPDATE_ORDER,
+    type: LATEST_ORDER,
     feedType,
     order
   }
 }
 
-export function updateOrderFulfilled (response) {
-  log('updateOrderFulfilled')
+export function latestOrderFulfilled (response) {
+  log('latestOrderFulfilled')
 
   return {
-    type: UPDATE_ORDER_FULFILLED,
+    type: LATEST_ORDER_FULFILLED,
     response
   }
 }
 
-export function updateOrderRejected (error) {
-  log('updateOrderRejected')
+export function latestOrderRejected (error) {
+  log('latestOrderRejected')
 
   return {
-    type: UPDATE_ORDER_REJECTED,
+    type: LATEST_ORDER_REJECTED,
     error
   }
 }

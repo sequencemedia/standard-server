@@ -5,9 +5,7 @@ import {
 } from 'uuid'
 
 /*
- *  Ordinarily this would be externalised
- *
- *  And we're not running HTTPS so `isSecure` is false
+ *  We're not running HTTPS so `isSecure` is false
  */
 const UID = {
   ttl: 2419200000,
@@ -23,12 +21,12 @@ const getBearerToken = (value = '') => (value.match(BEARERTOKEN) || []).shift()
 export default {
   assign: 'uid',
   async method ({ state = {}, headers: { authorization } }, h) {
-    let {
-      uid = getBearerToken(authorization)
-    } = state
-
     try {
-      h.state('uid', uid || (uid = v4()), UID)
+      const { // either the id is in state - or in the bearer token - or create an id
+        uid = getBearerToken(authorization) || v4()
+      } = state
+
+      h.state('uid', uid, UID)
 
       return uid
     } catch (e) {
