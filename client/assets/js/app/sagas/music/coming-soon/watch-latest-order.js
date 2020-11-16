@@ -22,9 +22,9 @@ function * latestOrderSaga ({ feedType, order }) {
   log('latestOrderSaga')
 
   try {
-    const response = yield call(api.latestOrder, feedType, order)
+    const { items = [] } = yield call(api.latest, feedType)
 
-    yield put(latestOrderFulfilled(response))
+    yield put(latestOrderFulfilled({ feedType, order, items }))
   } catch (e) {
     const exception = { status: 'ERROR', e }
 

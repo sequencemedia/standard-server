@@ -22,7 +22,7 @@ function * changeOrderSaga ({ feedType, order }) {
   log('changeOrderSaga')
 
   try {
-    const { items = [] } = yield call(api.change, feedType, order)
+    const { items = [] } = yield call(api.change, feedType)
 
     yield put(changeOrderFulfilled({ feedType, order, items }))
   } catch (e) {
