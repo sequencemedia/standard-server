@@ -15,7 +15,7 @@ import handleError from '~/config/gulp/handle-error'
 const buildSourcePath = path.relative(modulePath, sourcePath)
 const buildTargetPath = path.relative(modulePath, targetPath)
 
-export function iconsClean () {
+export function cleanIcons () {
   return (
     gulp.src(path.join(buildTargetPath, 'icons/*'), { read: false })
       .pipe(vinylPaths((paths) => del(paths, { force: true })))
@@ -30,7 +30,7 @@ export function icons () {
   )
 }
 
-export function iconsWatch () {
+export function watchIcons () {
   return (
     gulp.watch(
       path.join(buildSourcePath, 'icons/**/*.*'),
@@ -38,7 +38,7 @@ export function iconsWatch () {
         name: 'icons-watch',
         cwd: modulePath
       },
-      gulp.series(iconsClean, icons)
+      gulp.series(cleanIcons, icons)
     )
       .on('error', handleError)
   )

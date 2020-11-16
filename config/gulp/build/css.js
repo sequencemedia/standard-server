@@ -22,8 +22,8 @@ const buildTargetPath = path.relative(modulePath, targetPath)
 
 log('`@sequencemedia:config:gulp:build` is awake')
 
-export function cssClean () {
-  log('cssClean')
+export function cleanCss () {
+  log('cleanCss')
 
   return (
     gulp.src(path.join(buildTargetPath, 'stylesheets/*'), { read: false })
@@ -33,8 +33,8 @@ export function cssClean () {
 
 export const css = gulp.series(cssFromSass)
 
-export function cssWatch () {
-  log('cssWatch')
+export function watchCss () {
+  log('watchCss')
 
   return (
     gulp.watch(
@@ -47,7 +47,7 @@ export function cssWatch () {
         name: 'css-watch',
         cwd: modulePath
       },
-      gulp.series(cssClean, css)
+      gulp.series(cleanCss, css)
     )
       .on('error', handleError)
   )

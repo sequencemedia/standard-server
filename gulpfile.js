@@ -7,15 +7,15 @@ const gulp = require('gulp')
 const server = require('gulp-develop-server')
 
 const {
-  fontsClean: buildFontsClean,
+  cleanFonts,
   fonts: buildFonts,
-  fontsWatch: buildFontsWatch,
-  iconsClean: buildIconsClean,
+  watchFonts,
+  cleanIcons,
   icons: buildIcons,
-  iconsWatch: buildIconsWatch,
-  cssClean: buildCssClean,
+  watchIcons,
+  cleanCss,
   css: buildCss,
-  cssWatch: buildCssWatch
+  watchCss
 } = require('~/config/gulp/build')
 
 const {
@@ -42,54 +42,43 @@ const {
 debug.enable(DEBUG)
 
 gulp
-  .task('build:fonts:clean', buildFontsClean)
+  .task('clean:fonts', cleanFonts)
 
 gulp
-  .task('build:fonts', gulp.series('build:fonts:clean', buildFonts))
+  .task('build:fonts', gulp.series('clean:fonts', buildFonts))
 
 gulp
-  .task('build:fonts:watch', gulp.series('build:fonts', buildFontsWatch))
+  .task('watch:fonts', gulp.series('build:fonts', watchFonts))
 
 gulp
-  .task('build:icons:clean', buildIconsClean)
+  .task('clean:icons', cleanIcons)
 
 gulp
-  .task('build:icons', gulp.series('build:icons:clean', buildIcons))
+  .task('build:icons', gulp.series('clean:icons', buildIcons))
 
 gulp
-  .task('build:icons:watch', gulp.series('build:icons', buildIconsWatch))
+  .task('watch:icons', gulp.series('build:icons', watchIcons))
 
 gulp
-  .task('build:css:clean', buildCssClean)
+  .task('clean:css', cleanCss)
 
 gulp
-  .task('build:css', gulp.series('build:css:clean', buildCss))
+  .task('build:css', gulp.series('clean:css', buildCss))
 
 gulp
-  .task('build:css:watch', gulp.series('build:css', buildCssWatch))
+  .task('watch:css', gulp.series('build:css', watchCss))
 
 gulp
-  .task('build:clean', gulp.series('build:fonts:clean', 'build:icons:clean', 'build:css:clean'))
+  .task('clean', gulp.series('clean:fonts', 'clean:icons', 'clean:css'))
 
 gulp
   .task('build', gulp.series('build:fonts', 'build:icons', 'build:css'))
 
 gulp
-  .task('build:watch', gulp.parallel('build:fonts:watch', 'build:icons:watch', 'build:css:watch'))
+  .task('watch', gulp.parallel('watch:fonts', 'watch:icons', 'watch:css'))
 
 gulp
   .task('transform', transform)
-
-gulp
-  .task('watch', () => (
-    gulp
-      .watch([
-        clientPath.concat('/**/*'),
-        serverPath.concat('/**/*'),
-        appPath
-      ], { name: 'watch' }, gulp.series('server-restart'))
-      .on('error', handleError)
-  ))
 
 gulp
   .task('server-listen', (next) => server.listen({ path: appPath, args: process.argv.slice(2), execArgs: ['--harmony', '--colors'] }, next))
