@@ -15,7 +15,7 @@ export default [
   },
   {
     method: 'GET',
-    path: '/assets/{path*}',
+    path: '/assets/{asset*}',
     handler: {
       directory: {
         path: ASSETS_PATH,
