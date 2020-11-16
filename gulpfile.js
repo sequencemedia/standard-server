@@ -22,15 +22,6 @@ const {
   transform
 } = require('~/config/gulp/transform')
 
-const {
-  handleError
-} = require('~/config/gulp/handle-error')
-
-const {
-  clientPath,
-  serverPath
-} = require('~/config/paths')
-
 const appPath = path.resolve('./app.js')
 
 const {
