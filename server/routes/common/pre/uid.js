@@ -20,7 +20,7 @@ const getBearerToken = (value = '') => (value.match(BEARERTOKEN) || []).shift()
 
 export default {
   assign: 'uid',
-  async method ({ state = {}, headers: { authorization } }, h) {
+  method ({ state = {}, headers: { authorization } }, h) {
     try {
       const { // either the id is in state - or in the bearer token - or create an id
         uid = getBearerToken(authorization) || v4()
