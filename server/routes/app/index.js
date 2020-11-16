@@ -39,17 +39,6 @@ function renderFeedTypeFor (pathname) {
   }
 }
 
-function renderFeedTypeOrderFor (pathname) {
-  return function renderFeedTypeOrder ({ feedType, order, items }) {
-    const state = { music: { feedType, order }, [feedType]: { feedType, order, items } }
-
-    return {
-      app: renderToString(configureStore(state), { location: pathname }, routes),
-      state
-    }
-  }
-}
-
 export default function getAppRoutes (uri = 'http://localhost:5000') {
   return [
     {
@@ -79,17 +68,17 @@ export default function getAppRoutes (uri = 'http://localhost:5000') {
     {
       method: 'GET',
       path: '/latest/{feedType}/{order}',
-      handler ({ pre: { uid }, params: { feedType, order }, url: { pathname = '/' } }, h) {
+      handler ({ pre: { uid }, params: { feedType }, url: { pathname = '/' } }, h) {
         log('/latest/{feedType}/{order}')
 
         return (
-          fetch(`${uri}/api/latest/${feedType}/${order}`, {
+          fetch(`${uri}/api/latest/${feedType}`, {
             headers: {
               authorization: `Bearer: ${uid}`
             }
           })
             .then((response) => response.json())
-            .then(renderFeedTypeOrderFor(pathname))
+            .then(renderFeedTypeFor(pathname))
             .then((context) => h.view('index', context))
             .catch(handleError)
         )
@@ -127,17 +116,17 @@ export default function getAppRoutes (uri = 'http://localhost:5000') {
     {
       method: 'GET',
       path: '/{feedType}/{order}',
-      handler ({ pre: { uid }, params: { feedType, order }, url: { pathname = '/' } }, h) {
+      handler ({ pre: { uid }, params: { feedType }, url: { pathname = '/' } }, h) {
         log('/{feedType}/{order}')
 
         return (
-          fetch(`${uri}/api/change/${feedType}/${order}`, {
+          fetch(`${uri}/api/change/${feedType}`, {
             headers: {
               authorization: `Bearer: ${uid}`
             }
           })
             .then((response) => response.json())
-            .then(renderFeedTypeOrderFor(pathname))
+            .then(renderFeedTypeFor(pathname))
             .then((context) => h.view('index', context))
             .catch(handleError)
         )
