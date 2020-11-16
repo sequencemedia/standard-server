@@ -11,7 +11,7 @@ import getLatestLinkToOrderBy from './get-latest-link-to-order-by'
 function Latest ({ feedType, order, onClick }) {
   if (order === 'by-none') {
     return (
-      <div className='get-latest'>
+      <div className='latest'>
         <Link to={getLatestLinkTo(feedType)} onClick={onClick}>
           Get latest
         </Link>
@@ -20,7 +20,7 @@ function Latest ({ feedType, order, onClick }) {
   }
 
   return (
-    <div className='get-latest-order-by'>
+    <div className='latest-order-by'>
       <Link to={getLatestLinkToOrderBy(feedType, order)} onClick={onClick}>
         Get latest
       </Link>

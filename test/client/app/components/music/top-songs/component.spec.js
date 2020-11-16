@@ -9,9 +9,7 @@ Enzyme.configure({ adapter: new Adapter() })
 
 jest.mock('@sequencemedia/app/components/common/order')
 jest.mock('@sequencemedia/app/components/common/reset')
-jest.mock('@sequencemedia/app/components/common/get-latest')
-jest.mock('@sequencemedia/app/components/common/get-latest-order-by')
-
+jest.mock('@sequencemedia/app/components/common/latest')
 jest.mock('@sequencemedia/app/components/common/songs')
 
 const MOCK_ITEMS = [
@@ -33,10 +31,10 @@ describe('shinkansen-cogs/cogs/checkbox', () => {
       const component = (
         <Component
           feedType='MOCK FEED TYPE'
-          onClickOrder={jest.fn()}
-          onClickReset={jest.fn()}
-          onClickGetLatest={jest.fn()}
-          onClickGetLatestOrderBy={jest.fn()}
+          onMount={jest.fn()}
+          onMountOrderBy={jest.fn()}
+          onClickLatest={jest.fn()}
+          onClickLatestOrderBy={jest.fn()}
         />
       )
 
@@ -52,10 +50,10 @@ describe('shinkansen-cogs/cogs/checkbox', () => {
           feedType='MOCK FEED TYPE'
           order='MOCK ORDER'
           items={MOCK_ITEMS}
-          onClickOrder={jest.fn()}
-          onClickReset={jest.fn()}
-          onClickGetLatest={jest.fn()}
-          onClickGetLatestOrderBy={jest.fn()}
+          onMount={jest.fn()}
+          onMountOrderBy={jest.fn()}
+          onClickLatest={jest.fn()}
+          onClickLatestOrderBy={jest.fn()}
         />
       )
 

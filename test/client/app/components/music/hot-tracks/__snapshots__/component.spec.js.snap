@@ -9,12 +9,10 @@ exports[`shinkansen-cogs/cogs/checkbox <Component /> With additional props rende
   </h3>
   <Order
     feedType="MOCK FEED TYPE"
-    onClick={[Function]}
     order="MOCK ORDER"
   />
   <Reset
     feedType="MOCK FEED TYPE"
-    onClick={[Function]}
     order="MOCK ORDER"
   />
   <Playlists
@@ -41,12 +39,10 @@ exports[`shinkansen-cogs/cogs/checkbox <Component /> With required props renders
   </h3>
   <Order
     feedType="MOCK FEED TYPE"
-    onClick={[Function]}
     order="by-none"
   />
   <Reset
     feedType="MOCK FEED TYPE"
-    onClick={[Function]}
     order="by-none"
   />
   <Playlists

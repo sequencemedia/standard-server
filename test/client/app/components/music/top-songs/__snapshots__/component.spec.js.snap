@@ -9,20 +9,13 @@ exports[`shinkansen-cogs/cogs/checkbox <Component /> With additional props rende
   </h3>
   <Order
     feedType="MOCK FEED TYPE"
-    onClick={[Function]}
     order="MOCK ORDER"
   />
   <Reset
     feedType="MOCK FEED TYPE"
-    onClick={[Function]}
     order="MOCK ORDER"
   />
-  <GetLatest
-    feedType="MOCK FEED TYPE"
-    onClick={[Function]}
-    order="MOCK ORDER"
-  />
-  <GetLatestOrderBy
+  <Latest
     feedType="MOCK FEED TYPE"
     onClick={[Function]}
     order="MOCK ORDER"
@@ -55,20 +48,13 @@ exports[`shinkansen-cogs/cogs/checkbox <Component /> With required props renders
   </h3>
   <Order
     feedType="MOCK FEED TYPE"
-    onClick={[Function]}
     order="by-none"
   />
   <Reset
     feedType="MOCK FEED TYPE"
-    onClick={[Function]}
     order="by-none"
   />
-  <GetLatest
-    feedType="MOCK FEED TYPE"
-    onClick={[Function]}
-    order="by-none"
-  />
-  <GetLatestOrderBy
+  <Latest
     feedType="MOCK FEED TYPE"
     onClick={[Function]}
     order="by-none"

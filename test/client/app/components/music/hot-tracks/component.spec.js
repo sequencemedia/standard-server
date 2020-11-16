@@ -26,10 +26,10 @@ describe('shinkansen-cogs/cogs/checkbox', () => {
       const component = (
         <Component
           feedType='MOCK FEED TYPE'
-          onClickOrder={jest.fn()}
-          onClickReset={jest.fn()}
-          onClickGetLatest={jest.fn()}
-          onClickGetLatestOrderBy={jest.fn()}
+          onMount={jest.fn()}
+          onMountOrderBy={jest.fn()}
+          onClickLatest={jest.fn()}
+          onClickLatestOrderBy={jest.fn()}
         />
       )
 
@@ -45,10 +45,10 @@ describe('shinkansen-cogs/cogs/checkbox', () => {
           feedType='MOCK FEED TYPE'
           order='MOCK ORDER'
           items={MOCK_ITEMS}
-          onClickOrder={jest.fn()}
-          onClickReset={jest.fn()}
-          onClickGetLatest={jest.fn()}
-          onClickGetLatestOrderBy={jest.fn()}
+          onMount={jest.fn()}
+          onMountOrderBy={jest.fn()}
+          onClickLatest={jest.fn()}
+          onClickLatestOrderBy={jest.fn()}
         />
       )
 
