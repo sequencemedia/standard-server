@@ -5,15 +5,15 @@ import vinylPaths from 'vinyl-paths'
 import del from 'del'
 
 import {
-  modulePath,
+  currentDir,
   sourcePath,
   targetPath
 } from '~/config/gulp/paths'
 
 import handleError from '~/config/gulp/handle-error'
 
-const buildSourcePath = path.relative(modulePath, sourcePath)
-const buildTargetPath = path.relative(modulePath, targetPath)
+const buildSourcePath = path.relative(currentDir, sourcePath)
+const buildTargetPath = path.relative(currentDir, targetPath)
 
 export function cleanIcons () {
   return (
@@ -36,7 +36,7 @@ export function watchIcons () {
       path.join(buildSourcePath, 'icons/**/*.*'),
       {
         name: 'icons-watch',
-        cwd: modulePath
+        cwd: currentDir
       },
       gulp.series(cleanIcons, icons)
     )

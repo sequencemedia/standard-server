@@ -6,7 +6,7 @@ import vinylPaths from 'vinyl-paths'
 import del from 'del'
 
 import {
-  modulePath,
+  currentDir,
   sourcePath,
   targetPath
 } from '~/config/gulp/paths'
@@ -17,8 +17,8 @@ import cssFromSass from './css-from-sass'
 
 const log = debug('@sequencemedia:config:gulp:build')
 
-const buildSourcePath = path.relative(modulePath, sourcePath)
-const buildTargetPath = path.relative(modulePath, targetPath)
+const buildSourcePath = path.relative(currentDir, sourcePath)
+const buildTargetPath = path.relative(currentDir, targetPath)
 
 log('`@sequencemedia:config:gulp:build` is awake')
 
@@ -45,7 +45,7 @@ export function watchCss () {
       ],
       {
         name: 'css-watch',
-        cwd: modulePath
+        cwd: currentDir
       },
       gulp.series(cleanCss, css)
     )

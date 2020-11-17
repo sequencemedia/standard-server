@@ -9,7 +9,7 @@ import vision from '@hapi/vision'
 import Handlebars from 'handlebars'
 
 import {
-  modulePath,
+  currentDir,
   serverPath
 } from '~/config/paths'
 
@@ -49,7 +49,7 @@ export default async function start ({ host = 'localhost', port = 5000 } = {}) {
   await server.register([inert, vision])
 
   server.views({
-    relativeTo: modulePath,
+    relativeTo: currentDir,
     path: path.join(serverPath, 'views'),
     engines: {
       html: {

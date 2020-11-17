@@ -5,7 +5,7 @@ import {
 } from 'path'
 
 import {
-  modulePath
+  currentDir
 } from '~/config/gulp/paths'
 
 const log = debug('@sequencemedia:config:gulp:handle-error')
@@ -20,11 +20,11 @@ export function handleError ({
 } = {}) {
   switch (code) {
     case 'EPERM':
-      log(`A watched file or directory has invalid permissions: '${relative(modulePath, f || p)}'`)
+      log(`A watched file or directory has invalid permissions: '${relative(currentDir, f || p)}'`)
       break
 
     case 'ENOENT':
-      log(`A watched file or directory has been deleted: '${relative(modulePath, f || p)}'`)
+      log(`A watched file or directory has been deleted: '${relative(currentDir, f || p)}'`)
       break
 
     default:

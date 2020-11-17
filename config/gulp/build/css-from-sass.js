@@ -18,15 +18,15 @@ import {
 } from '~/package'
 
 import {
-  modulePath,
+  currentDir,
   sourcePath,
   targetPath
 } from '~/config/gulp/paths'
 
 import handleError from '~/config/gulp/handle-error'
 
-const buildSourcePath = path.relative(modulePath, sourcePath)
-const buildTargetPath = path.relative(modulePath, targetPath)
+const buildSourcePath = path.relative(currentDir, sourcePath)
+const buildTargetPath = path.relative(currentDir, targetPath)
 
 function getTransformForSass () {
   return (
