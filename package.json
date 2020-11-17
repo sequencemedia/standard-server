@@ -37,7 +37,7 @@
     "test:jest": "cross-env NODE_ENV=test jest --verbose --run-in-band",
     "test:mocha": "cross-env NODE_ENV=test mocha -r @babel/register test/server --recursive",
     "gulp": "gulp --color",
-    "pre-commit": "npm run lint && npm run test && npm run build && npm run transform && git add public"
+    "pre-commit": "npm run lint && npm run test && npm run build && npm run transform && git add public server/views"
   },
   "dependencies": {
     "@babel/runtime": "^7.12.5",
