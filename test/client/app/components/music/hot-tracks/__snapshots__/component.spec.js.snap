@@ -7,15 +7,15 @@ exports[`shinkansen-cogs/cogs/checkbox <Component /> With additional props rende
   <h3>
     Hot Tracks
   </h3>
-  <Order
+  <MockOrder
     feedType="MOCK FEED TYPE"
     order="MOCK ORDER"
   />
-  <Reset
+  <MockReset
     feedType="MOCK FEED TYPE"
     order="MOCK ORDER"
   />
-  <Playlists
+  <MockPlaylists
     items={
       Array [
         Object {
@@ -37,15 +37,15 @@ exports[`shinkansen-cogs/cogs/checkbox <Component /> With required props renders
   <h3>
     Hot Tracks
   </h3>
-  <Order
+  <MockOrder
     feedType="MOCK FEED TYPE"
     order="by-none"
   />
-  <Reset
+  <MockReset
     feedType="MOCK FEED TYPE"
     order="by-none"
   />
-  <Playlists
+  <MockPlaylists
     items={Array []}
   />
 </div>

@@ -7,10 +7,54 @@ import Component from '@sequencemedia/app/components/music/top-songs/component'
 
 Enzyme.configure({ adapter: new Adapter() })
 
-jest.mock('@sequencemedia/app/components/common/order')
-jest.mock('@sequencemedia/app/components/common/reset')
-jest.mock('@sequencemedia/app/components/common/latest')
-jest.mock('@sequencemedia/app/components/common/songs')
+jest.mock('@sequencemedia/app/components/common/order', () => {
+  const MockOrder = () => (
+    <div className='mock-order'>
+      Mock Order
+    </div>
+  )
+
+  return {
+    __esModule: true,
+    default: MockOrder
+  }
+})
+jest.mock('@sequencemedia/app/components/common/reset', () => {
+  const MockReset = () => (
+    <div className='mock-reset'>
+      Mock Reset
+    </div>
+  )
+
+  return {
+    __esModule: true,
+    default: MockReset
+  }
+})
+jest.mock('@sequencemedia/app/components/common/latest', () => {
+  const MockLatest = () => (
+    <div className='mock-latest'>
+      Mock Latest
+    </div>
+  )
+
+  return {
+    __esModule: true,
+    default: MockLatest
+  }
+})
+jest.mock('@sequencemedia/app/components/common/songs', () => {
+  const MockSongs = () => (
+    <div className='mock-songs'>
+      Mock Songs
+    </div>
+  )
+
+  return {
+    __esModule: true,
+    default: MockSongs
+  }
+})
 
 const MOCK_ITEMS = [
   {

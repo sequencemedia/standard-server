@@ -7,20 +7,20 @@ exports[`shinkansen-cogs/cogs/checkbox <Component /> With additional props rende
   <h3>
     Top Albums
   </h3>
-  <Order
+  <MockOrder
     feedType="MOCK FEED TYPE"
     order="MOCK ORDER"
   />
-  <Reset
+  <MockReset
     feedType="MOCK FEED TYPE"
     order="MOCK ORDER"
   />
-  <Latest
+  <MockLatest
     feedType="MOCK FEED TYPE"
     onClick={[Function]}
     order="MOCK ORDER"
   />
-  <Albums
+  <MockAlbums
     items={
       Array [
         Object {
@@ -46,20 +46,20 @@ exports[`shinkansen-cogs/cogs/checkbox <Component /> With required props renders
   <h3>
     Top Albums
   </h3>
-  <Order
+  <MockOrder
     feedType="MOCK FEED TYPE"
     order="by-none"
   />
-  <Reset
+  <MockReset
     feedType="MOCK FEED TYPE"
     order="by-none"
   />
-  <Latest
+  <MockLatest
     feedType="MOCK FEED TYPE"
     onClick={[Function]}
     order="by-none"
   />
-  <Albums
+  <MockAlbums
     items={Array []}
   />
 </div>

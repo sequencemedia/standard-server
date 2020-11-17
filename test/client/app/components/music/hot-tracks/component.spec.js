@@ -7,9 +7,42 @@ import Component from '@sequencemedia/app/components/music/hot-tracks/component'
 
 Enzyme.configure({ adapter: new Adapter() })
 
-jest.mock('@sequencemedia/app/components/common/playlists/order')
-jest.mock('@sequencemedia/app/components/common/playlists/reset')
-jest.mock('@sequencemedia/app/components/common/playlists')
+jest.mock('@sequencemedia/app/components/common/playlists/order', () => {
+  const MockOrder = () => (
+    <div className='mock-order'>
+      Mock Order
+    </div>
+  )
+
+  return {
+    __esModule: true,
+    default: MockOrder
+  }
+})
+jest.mock('@sequencemedia/app/components/common/playlists/reset', () => {
+  const MockReset = () => (
+    <div className='mock-reset'>
+      Mock Reset
+    </div>
+  )
+
+  return {
+    __esModule: true,
+    default: MockReset
+  }
+})
+jest.mock('@sequencemedia/app/components/common/playlists', () => {
+  const MockPlaylists = () => (
+    <div className='mock-playlists'>
+      Mock Latest
+    </div>
+  )
+
+  return {
+    __esModule: true,
+    default: MockPlaylists
+  }
+})
 
 const MOCK_ITEMS = [
   {

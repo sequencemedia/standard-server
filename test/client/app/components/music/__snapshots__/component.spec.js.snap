@@ -1,0 +1,421 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`@sequencemedia/app/components/music/component <Component /> With \`selectedTab\` prop \`COMING_SOON\` renders 1`] = `
+<MockTabSet
+  onChange={[Function]}
+  selectedTab="MOCK TOP ALBUMS"
+>
+  <MockTabGroup>
+    <MockTab
+      tab="MOCK TOP ALBUMS"
+    >
+      <MockLink>
+        Top Albums
+      </MockLink>
+    </MockTab>
+    <MockTab
+      tab="MOCK TOP SONGS"
+    >
+      <MockLink>
+        Top Songs
+      </MockLink>
+    </MockTab>
+    <MockTab
+      tab="MOCK HOT TRACKS"
+    >
+      <MockLink>
+        Hot Tracks
+      </MockLink>
+    </MockTab>
+    <MockTab
+      tab="MOCK NEW RELEASES"
+    >
+      <MockLink>
+        New Releases
+      </MockLink>
+    </MockTab>
+    <MockTab
+      tab="MOCK COMING SOON"
+    >
+      <MockLink>
+        Coming Soon
+      </MockLink>
+    </MockTab>
+  </MockTabGroup>
+  <MockTabPanel
+    tab="MOCK TOP ALBUMS"
+  >
+    <MockTopAlbums />
+  </MockTabPanel>
+  <MockTabPanel
+    tab="MOCK TOP SONGS"
+  >
+    <MockTopSongs />
+  </MockTabPanel>
+  <MockTabPanel
+    tab="MOCK HOT TRACKS"
+  >
+    <MockHotTracks />
+  </MockTabPanel>
+  <MockTabPanel
+    tab="MOCK NEW RELEASES"
+  >
+    <MockNewReleases />
+  </MockTabPanel>
+  <MockTabPanel
+    tab="MOCK COMING SOON"
+  >
+    <MockComingSoon />
+  </MockTabPanel>
+</MockTabSet>
+`;
+
+exports[`@sequencemedia/app/components/music/component <Component /> With \`selectedTab\` prop \`HOT_TRACKS\` renders 1`] = `
+<MockTabSet
+  onChange={[Function]}
+  selectedTab="MOCK TOP ALBUMS"
+>
+  <MockTabGroup>
+    <MockTab
+      tab="MOCK TOP ALBUMS"
+    >
+      <MockLink>
+        Top Albums
+      </MockLink>
+    </MockTab>
+    <MockTab
+      tab="MOCK TOP SONGS"
+    >
+      <MockLink>
+        Top Songs
+      </MockLink>
+    </MockTab>
+    <MockTab
+      tab="MOCK HOT TRACKS"
+    >
+      <MockLink>
+        Hot Tracks
+      </MockLink>
+    </MockTab>
+    <MockTab
+      tab="MOCK NEW RELEASES"
+    >
+      <MockLink>
+        New Releases
+      </MockLink>
+    </MockTab>
+    <MockTab
+      tab="MOCK COMING SOON"
+    >
+      <MockLink>
+        Coming Soon
+      </MockLink>
+    </MockTab>
+  </MockTabGroup>
+  <MockTabPanel
+    tab="MOCK TOP ALBUMS"
+  >
+    <MockTopAlbums />
+  </MockTabPanel>
+  <MockTabPanel
+    tab="MOCK TOP SONGS"
+  >
+    <MockTopSongs />
+  </MockTabPanel>
+  <MockTabPanel
+    tab="MOCK HOT TRACKS"
+  >
+    <MockHotTracks />
+  </MockTabPanel>
+  <MockTabPanel
+    tab="MOCK NEW RELEASES"
+  >
+    <MockNewReleases />
+  </MockTabPanel>
+  <MockTabPanel
+    tab="MOCK COMING SOON"
+  >
+    <MockComingSoon />
+  </MockTabPanel>
+</MockTabSet>
+`;
+
+exports[`@sequencemedia/app/components/music/component <Component /> With \`selectedTab\` prop \`NEW_RELEASES\` renders 1`] = `
+<MockTabSet
+  onChange={[Function]}
+  selectedTab="MOCK TOP ALBUMS"
+>
+  <MockTabGroup>
+    <MockTab
+      tab="MOCK TOP ALBUMS"
+    >
+      <MockLink>
+        Top Albums
+      </MockLink>
+    </MockTab>
+    <MockTab
+      tab="MOCK TOP SONGS"
+    >
+      <MockLink>
+        Top Songs
+      </MockLink>
+    </MockTab>
+    <MockTab
+      tab="MOCK HOT TRACKS"
+    >
+      <MockLink>
+        Hot Tracks
+      </MockLink>
+    </MockTab>
+    <MockTab
+      tab="MOCK NEW RELEASES"
+    >
+      <MockLink>
+        New Releases
+      </MockLink>
+    </MockTab>
+    <MockTab
+      tab="MOCK COMING SOON"
+    >
+      <MockLink>
+        Coming Soon
+      </MockLink>
+    </MockTab>
+  </MockTabGroup>
+  <MockTabPanel
+    tab="MOCK TOP ALBUMS"
+  >
+    <MockTopAlbums />
+  </MockTabPanel>
+  <MockTabPanel
+    tab="MOCK TOP SONGS"
+  >
+    <MockTopSongs />
+  </MockTabPanel>
+  <MockTabPanel
+    tab="MOCK HOT TRACKS"
+  >
+    <MockHotTracks />
+  </MockTabPanel>
+  <MockTabPanel
+    tab="MOCK NEW RELEASES"
+  >
+    <MockNewReleases />
+  </MockTabPanel>
+  <MockTabPanel
+    tab="MOCK COMING SOON"
+  >
+    <MockComingSoon />
+  </MockTabPanel>
+</MockTabSet>
+`;
+
+exports[`@sequencemedia/app/components/music/component <Component /> With \`selectedTab\` prop \`TOP_ALBUMS\` renders 1`] = `
+<MockTabSet
+  onChange={[Function]}
+  selectedTab="MOCK TOP ALBUMS"
+>
+  <MockTabGroup>
+    <MockTab
+      tab="MOCK TOP ALBUMS"
+    >
+      <MockLink>
+        Top Albums
+      </MockLink>
+    </MockTab>
+    <MockTab
+      tab="MOCK TOP SONGS"
+    >
+      <MockLink>
+        Top Songs
+      </MockLink>
+    </MockTab>
+    <MockTab
+      tab="MOCK HOT TRACKS"
+    >
+      <MockLink>
+        Hot Tracks
+      </MockLink>
+    </MockTab>
+    <MockTab
+      tab="MOCK NEW RELEASES"
+    >
+      <MockLink>
+        New Releases
+      </MockLink>
+    </MockTab>
+    <MockTab
+      tab="MOCK COMING SOON"
+    >
+      <MockLink>
+        Coming Soon
+      </MockLink>
+    </MockTab>
+  </MockTabGroup>
+  <MockTabPanel
+    tab="MOCK TOP ALBUMS"
+  >
+    <MockTopAlbums />
+  </MockTabPanel>
+  <MockTabPanel
+    tab="MOCK TOP SONGS"
+  >
+    <MockTopSongs />
+  </MockTabPanel>
+  <MockTabPanel
+    tab="MOCK HOT TRACKS"
+  >
+    <MockHotTracks />
+  </MockTabPanel>
+  <MockTabPanel
+    tab="MOCK NEW RELEASES"
+  >
+    <MockNewReleases />
+  </MockTabPanel>
+  <MockTabPanel
+    tab="MOCK COMING SOON"
+  >
+    <MockComingSoon />
+  </MockTabPanel>
+</MockTabSet>
+`;
+
+exports[`@sequencemedia/app/components/music/component <Component /> With \`selectedTab\` prop \`TOP_SONGS\` renders 1`] = `
+<MockTabSet
+  onChange={[Function]}
+  selectedTab="MOCK TOP ALBUMS"
+>
+  <MockTabGroup>
+    <MockTab
+      tab="MOCK TOP ALBUMS"
+    >
+      <MockLink>
+        Top Albums
+      </MockLink>
+    </MockTab>
+    <MockTab
+      tab="MOCK TOP SONGS"
+    >
+      <MockLink>
+        Top Songs
+      </MockLink>
+    </MockTab>
+    <MockTab
+      tab="MOCK HOT TRACKS"
+    >
+      <MockLink>
+        Hot Tracks
+      </MockLink>
+    </MockTab>
+    <MockTab
+      tab="MOCK NEW RELEASES"
+    >
+      <MockLink>
+        New Releases
+      </MockLink>
+    </MockTab>
+    <MockTab
+      tab="MOCK COMING SOON"
+    >
+      <MockLink>
+        Coming Soon
+      </MockLink>
+    </MockTab>
+  </MockTabGroup>
+  <MockTabPanel
+    tab="MOCK TOP ALBUMS"
+  >
+    <MockTopAlbums />
+  </MockTabPanel>
+  <MockTabPanel
+    tab="MOCK TOP SONGS"
+  >
+    <MockTopSongs />
+  </MockTabPanel>
+  <MockTabPanel
+    tab="MOCK HOT TRACKS"
+  >
+    <MockHotTracks />
+  </MockTabPanel>
+  <MockTabPanel
+    tab="MOCK NEW RELEASES"
+  >
+    <MockNewReleases />
+  </MockTabPanel>
+  <MockTabPanel
+    tab="MOCK COMING SOON"
+  >
+    <MockComingSoon />
+  </MockTabPanel>
+</MockTabSet>
+`;
+
+exports[`@sequencemedia/app/components/music/component <Component /> With required props renders 1`] = `
+<MockTabSet
+  onChange={[Function]}
+  selectedTab="MOCK TOP ALBUMS"
+>
+  <MockTabGroup>
+    <MockTab
+      tab="MOCK TOP ALBUMS"
+    >
+      <MockLink>
+        Top Albums
+      </MockLink>
+    </MockTab>
+    <MockTab
+      tab="MOCK TOP SONGS"
+    >
+      <MockLink>
+        Top Songs
+      </MockLink>
+    </MockTab>
+    <MockTab
+      tab="MOCK HOT TRACKS"
+    >
+      <MockLink>
+        Hot Tracks
+      </MockLink>
+    </MockTab>
+    <MockTab
+      tab="MOCK NEW RELEASES"
+    >
+      <MockLink>
+        New Releases
+      </MockLink>
+    </MockTab>
+    <MockTab
+      tab="MOCK COMING SOON"
+    >
+      <MockLink>
+        Coming Soon
+      </MockLink>
+    </MockTab>
+  </MockTabGroup>
+  <MockTabPanel
+    tab="MOCK TOP ALBUMS"
+  >
+    <MockTopAlbums />
+  </MockTabPanel>
+  <MockTabPanel
+    tab="MOCK TOP SONGS"
+  >
+    <MockTopSongs />
+  </MockTabPanel>
+  <MockTabPanel
+    tab="MOCK HOT TRACKS"
+  >
+    <MockHotTracks />
+  </MockTabPanel>
+  <MockTabPanel
+    tab="MOCK NEW RELEASES"
+  >
+    <MockNewReleases />
+  </MockTabPanel>
+  <MockTabPanel
+    tab="MOCK COMING SOON"
+  >
+    <MockComingSoon />
+  </MockTabPanel>
+</MockTabSet>
+`;
