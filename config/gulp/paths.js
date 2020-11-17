@@ -5,11 +5,11 @@ import path from 'path'
  */
 export const modulePath = process.cwd()
 
-const clientPath = path.resolve(modulePath, 'client')
-const publicPath = path.resolve(modulePath, 'public')
+const clientPath = path.join(modulePath, 'client')
+const publicPath = path.join(modulePath, 'public')
 
 /*
  *  Gulp
  */
-export const sourcePath = path.resolve(clientPath, 'assets')
-export const targetPath = path.resolve(publicPath, 'assets')
+export const sourcePath = path.join(clientPath, 'assets')
+export const targetPath = path.join(publicPath, 'assets')

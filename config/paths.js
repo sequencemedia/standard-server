@@ -4,11 +4,11 @@ import path from 'path'
  *  Server
  */
 export const modulePath = process.cwd()
-export const clientPath = path.resolve(modulePath, 'client')
-export const serverPath = path.resolve(modulePath, 'server')
-export const publicPath = path.resolve(modulePath, 'public')
+export const clientPath = path.join(modulePath, 'client')
+export const serverPath = path.join(modulePath, 'server')
+export const publicPath = path.join(modulePath, 'public')
 
 /*
  *  Server (shorthand)
  */
-export const assetsPath = path.resolve(publicPath, 'assets')
+export const assetsPath = path.join(publicPath, 'assets')
