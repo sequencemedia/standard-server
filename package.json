@@ -86,7 +86,7 @@
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.5",
     "enzyme-to-json": "^3.6.1",
-    "eslint": "^7.14.0",
+    "eslint": "^7.15.0",
     "eslint-config-standard": "^16.0.2",
     "eslint-import-resolver-babel-module": "^5.2.0",
     "eslint-plugin-import": "^2.22.1",
@@ -118,7 +118,7 @@
     "stylelint-scss": "^3.18.0",
     "terser-webpack-plugin": "^5.0.3",
     "vinyl-paths": "^3.0.1",
-    "webpack": "^5.9.0",
+    "webpack": "^5.10.0",
     "webpack-cli": "^4.2.0",
     "webpack-merge": "^5.4.0"
   },
