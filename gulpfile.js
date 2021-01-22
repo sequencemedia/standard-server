@@ -1,7 +1,6 @@
 require('module-alias/register')
 require('@babel/register')
 
-const debug = require('debug')
 const path = require('path')
 const gulp = require('gulp')
 const server = require('gulp-develop-server')
@@ -29,14 +28,6 @@ const {
 const clientPath = path.resolve('./client')
 const serverPath = path.resolve('./server')
 const appPath = path.resolve('./app.js')
-
-const {
-  env: {
-    DEBUG = '@sequencemedia:config:gulp:handle-error'
-  }
-} = process
-
-debug.enable(DEBUG)
 
 gulp
   .task('clean:fonts', cleanFonts)

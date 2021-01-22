@@ -10,6 +10,14 @@ import {
 
 const log = debug('@sequencemedia:config:gulp:handle-error')
 
+const {
+  env: {
+    DEBUG = '@sequencemedia:config:gulp:handle-error'
+  }
+} = process
+
+debug.enable(DEBUG)
+
 log('`handleError` is awake')
 
 export function handleError ({
