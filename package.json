@@ -107,7 +107,7 @@
     "jest": "^26.6.3",
     "mocha": "^8.2.1",
     "module-alias": "^2.2.2",
-    "postcss": "^8.2.4",
+    "postcss": "^8.2.5",
     "postcss-normalize": "^9.0.0",
     "postcss-scss": "^3.0.4",
     "sinon": "^9.2.4",
@@ -117,7 +117,7 @@
     "stylelint-scss": "^3.18.0",
     "terser-webpack-plugin": "^5.1.1",
     "vinyl-paths": "^3.0.1",
-    "webpack": "^5.21.0",
+    "webpack": "^5.21.1",
     "webpack-cli": "^4.5.0",
     "webpack-merge": "^5.7.3"
   },
