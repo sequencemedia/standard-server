@@ -103,7 +103,7 @@
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "^3.0.0",
-    "husky": "4.3.8",
+    "husky": "^5.0.9",
     "jest": "^26.6.3",
     "mocha": "^8.3.0",
     "module-alias": "^2.2.2",
@@ -125,10 +125,5 @@
     "~": ".",
     "@sequencemedia/api": "./client/assets/js/api",
     "@sequencemedia/app": "./client/assets/js/app"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run pre-commit"
-    }
   }
 }
