@@ -109,7 +109,7 @@
     "module-alias": "^2.2.2",
     "postcss": "^8.2.7",
     "postcss-normalize": "^9.0.0",
-    "postcss-scss": "^3.0.4",
+    "postcss-scss": "^3.0.5",
     "sinon": "^9.2.4",
     "sinon-chai": "^3.5.0",
     "stylelint": "^13.11.0",
