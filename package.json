@@ -42,7 +42,7 @@
   "dependencies": {
     "@babel/runtime": "^7.13.10",
     "@hapi/boom": "^9.1.2",
-    "@hapi/hapi": "^20.1.1",
+    "@hapi/hapi": "^20.1.2",
     "@hapi/inert": "^6.0.3",
     "@hapi/joi": "^17.1.1",
     "@hapi/vision": "^6.0.1",
@@ -117,7 +117,7 @@
     "stylelint-scss": "^3.19.0",
     "terser-webpack-plugin": "^5.1.1",
     "vinyl-paths": "^3.0.1",
-    "webpack": "^5.27.0",
+    "webpack": "^5.27.1",
     "webpack-cli": "^4.5.0",
     "webpack-merge": "^5.7.3"
   },
