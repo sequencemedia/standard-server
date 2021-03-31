@@ -107,7 +107,7 @@
     "jest": "^26.6.3",
     "mocha": "^8.3.2",
     "module-alias": "^2.2.2",
-    "postcss": "^8.2.8",
+    "postcss": "^8.2.9",
     "postcss-normalize": "^9.0.0",
     "postcss-scss": "^3.0.5",
     "sinon": "^10.0.0",
