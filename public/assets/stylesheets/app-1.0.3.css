@@ -4,8 +4,8 @@
 
 body {
   font-family: gill-sans-nova,sans-serif;
-  font-weight: 300;
-  font-style: normal
+  font-style: normal;
+  font-weight: 300
 }
 
 h1,
@@ -28,10 +28,10 @@ a:visited {
 
 ol.albums,
 ol.songs {
+  border: none;
   list-style-type: none;
   margin: 0;
-  padding: 0;
-  border: none
+  padding: 0
 }
 
 ol.albums li,
@@ -46,8 +46,8 @@ ol.albums li .song,
 ol.songs li .album,
 ol.songs li .artist,
 ol.songs li .song {
-  width: 200px;
-  margin: 0 auto
+  margin: 0 auto;
+  width: 200px
 }
 
 ol.albums li .album img,
@@ -56,8 +56,8 @@ ol.albums li .song img,
 ol.songs li .album img,
 ol.songs li .artist img,
 ol.songs li .song img {
-  width: 200px;
-  height: 200px
+  height: 200px;
+  width: 200px
 }
 
 ol.albums li .album a.name span,
@@ -67,8 +67,8 @@ ol.songs li .album a.name span,
 ol.songs li .artist a.name span,
 ol.songs li .song a.name span {
   display: block;
-  text-transform: uppercase;
-  font-weight: 700
+  font-weight: 700;
+  text-transform: uppercase
 }
 
 ol.albums li .album a.artist-name span,
@@ -83,24 +83,24 @@ ol.songs li .song a.artist-name span {
 ol.albums li .release-date,
 ol.songs li .release-date {
   display: block;
-  text-align: center;
   font-weight: 700;
-  line-height: 2rem
+  line-height: 2rem;
+  text-align: center
 }
 
 ol.albums li .copyright,
 ol.songs li .copyright {
   display: block;
-  text-align: center;
+  font-size: .75rem;
   font-weight: 300;
-  font-size: .75rem
+  text-align: center
 }
 
 ol.playlists {
+  border: none;
   list-style-type: none;
   margin: 0;
-  padding: 0;
-  border: none
+  padding: 0
 }
 
 ol.playlists li {
@@ -109,18 +109,18 @@ ol.playlists li {
 }
 
 ol.playlists li .playlist {
-  width: 200px;
-  margin: 0 auto
+  margin: 0 auto;
+  width: 200px
 }
 
 ol.playlists li .playlist img {
-  width: 200px;
-  height: 200px
+  height: 200px;
+  width: 200px
 }
 
 ol.playlists li .playlist a.name span {
   display: block;
-  text-transform: uppercase;
-  font-weight: 700
+  font-weight: 700;
+  text-transform: uppercase
 }
 /*# sourceMappingURL=app-1.0.3.css.map */
