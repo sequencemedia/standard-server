@@ -1,13 +1,22 @@
 #!/bin/bash
 
 NVM=~/.nvm
+
 if [ -f "$NVM/nvm.sh" ];
 then
+  unset npm_package_scripts_nvm
+  unset npm_config_prefix
+  unset npm_lifecycle_script
+
   source $NVM/nvm.sh
 else
   NVM=$(brew --prefix nvm)
   if [ -f "$NVM/nvm.sh" ];
   then
+    unset npm_package_scripts_nvm
+    unset npm_config_prefix
+    unset npm_lifecycle_script
+
     source $NVM/nvm.sh
   fi
 fi
@@ -31,5 +40,3 @@ else
     echo NVM configured
   fi
 fi
-
-exit 0
