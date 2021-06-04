@@ -100,7 +100,7 @@
     "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "^3.0.0",
     "husky": "^6.0.0",
-    "jest": "^27.0.3",
+    "jest": "^27.0.4",
     "mocha": "^8.4.0",
     "module-alias": "^2.2.2",
     "postcss": "^8.3.0",
