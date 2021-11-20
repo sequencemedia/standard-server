@@ -106,5 +106,8 @@ module.exports = ({ NODE_ENV = 'production' } = process.env) => ({
     }),
     new EnvironmentPlugin({ NODE_ENV }),
     new SourceMapDevToolPlugin({ filename: `[name]-${version}.js.map` })
-  ]
+  ],
+  experiments: {
+    backCompat: false
+  }
 })

@@ -10,6 +10,7 @@ module.exports = (env) => (
   merge(common(env), {
     mode: 'production',
     optimization: {
+      minimize: true,
       minimizer: [
         new TerserPlugin()
       ]
