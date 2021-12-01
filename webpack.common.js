@@ -48,7 +48,7 @@ module.exports = ({ NODE_ENV = 'production' } = process.env) => ({
               [
                 '@babel/env', {
                   targets: {
-                    node: '12.19.0',
+                    node: 'current',
                     browsers: [
                       'last 4 versions',
                       'safari >= 9',
