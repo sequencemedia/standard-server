@@ -23,9 +23,9 @@ const {
 
 debug.enable(DEBUG)
 
-const log = debug('@sequencemedia')
+const log = debug('@sequencemedia/standard-server')
 
-log('`@sequencemedia:server` is awake')
+log('`@sequencemedia/standard-server` is awake')
 
 export default async function start ({ host = 'localhost', port = 5000 } = {}) {
   const server = Hapi.server({ host, port })

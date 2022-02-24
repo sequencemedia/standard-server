@@ -16,9 +16,9 @@ import {
 
 import uid from '~/server/routes/common/pre/uid'
 
-const log = debug('@sequencemedia:server:routes:app')
+const log = debug('@sequencemedia/standard-server:routes:app')
 
-log('`@sequencemedia:server:routes:app` is awake')
+log('`@sequencemedia/standard-server:routes:app` is awake')
 
 function handleError (e) {
   log(e)

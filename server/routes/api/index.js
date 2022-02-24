@@ -10,9 +10,9 @@ import {
 
 import sort from './sort'
 
-const log = debug('@sequencemedia:server:routes:api')
+const log = debug('@sequencemedia/standard-server:routes:api')
 
-log('`@sequencemedia:server:routes:api` is awake')
+log('`@sequencemedia/standard-server:routes:api` is awake')
 
 export default function getApiRoutes () {
   return [
