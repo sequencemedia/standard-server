@@ -59,7 +59,7 @@
     "react-redux": "7.2.2",
     "react-router": "5.2.0",
     "react-router-dom": "5.2.0",
-    "react-tab-set": "^1.1.156",
+    "react-tab-set": "^1.1.157",
     "redux": "^4.1.2",
     "redux-saga": "^1.1.3",
     "sass": "^1.50.0",
