@@ -1,6 +1,6 @@
 const debug = require('debug')
 
-const log = debug('standard-server')
+const log = debug('@sequencemedia/standard-server')
 
 const {
   env: {
@@ -8,7 +8,7 @@ const {
   }
 } = process
 
-log('`standard-server` is awake')
+log('`@sequencemedia/standard-server` is awake')
 
 function env () {
   log({ NODE_ENV })
