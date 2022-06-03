@@ -1,7 +1,7 @@
 module.exports = {
   bail: 1,
   verbose: true,
-  rootDir: './test/client',
+  rootDir: '.', // location of babel.config.js
   collectCoverage: false,
-  coverageDirectory: '../../coverage'
+  coverageDirectory: './coverage'
 }

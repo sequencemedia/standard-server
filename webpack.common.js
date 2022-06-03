@@ -42,54 +42,7 @@ module.exports = ({ NODE_ENV = 'production' } = process.env) => ({
       {
         test: /\.js?$/,
         use: {
-          loader: 'babel-loader',
-          options: {
-            presets: [
-              [
-                '@babel/env', {
-                  targets: {
-                    node: 'current',
-                    browsers: [
-                      'last 4 versions',
-                      'safari >= 9',
-                      'ios >= 8',
-                      'ie >= 9',
-                      '> 2%'
-                    ]
-                  },
-                  useBuiltIns: 'usage',
-                  corejs: 3
-                }
-              ],
-              '@babel/react'
-            ],
-            plugins: [
-              '@babel/proposal-export-default-from',
-              '@babel/proposal-export-namespace-from',
-              [
-                '@babel/proposal-class-properties',
-                {
-                  loose: false
-                }
-              ],
-              [
-                'minify-dead-code-elimination',
-                {
-                  optimizeRawSize: true
-                }
-              ],
-              [
-                'module-resolver', {
-                  root: ['..'],
-                  cwd: 'babelrc',
-                  alias: {
-                    '@sequencemedia/api': './api',
-                    '@sequencemedia/app': './app'
-                  }
-                }
-              ]
-            ]
-          }
+          loader: 'babel-loader'
         },
         exclude: /node_modules|react-tab-set/ //  Required!
       }
