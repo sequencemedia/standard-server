@@ -22,8 +22,8 @@ exports[`shinkansen-cogs/cogs/checkbox <Component /> With additional props rende
   />
   <MockSongs
     items={
-      Array [
-        Object {
+      [
+        {
           "artistName": "MOCK ARTIST NAME",
           "artistUrl": "MOCK ARTIST URL",
           "artworkUrl100": "MOCK ARTWORK URL 100",
@@ -60,7 +60,7 @@ exports[`shinkansen-cogs/cogs/checkbox <Component /> With required props renders
     order="by-none"
   />
   <MockSongs
-    items={Array []}
+    items={[]}
   />
 </div>
 `;
