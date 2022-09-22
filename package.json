@@ -47,7 +47,7 @@
     "@hapi/inert": "^7.0.0",
     "@hapi/joi": "^17.1.1",
     "@hapi/vision": "^7.0.0",
-    "@sequencemedia/react-router-redux-render": "^2.0.241",
+    "@sequencemedia/react-router-redux-render": "^2.0.242",
     "cross-env": "^7.0.3",
     "debug": "^4.3.4",
     "handlebars": "^4.7.7",
@@ -62,7 +62,7 @@
     "react-tab-set": "^1.1.197",
     "redux": "^4.2.0",
     "redux-saga": "^1.2.1",
-    "sass": "^1.54.9",
+    "sass": "^1.55.0",
     "uuid": "^9.0.0"
   },
   "devDependencies": {
@@ -116,7 +116,7 @@
     "postcss-scss": "^4.0.5",
     "sinon": "^14.0.0",
     "sinon-chai": "^3.7.0",
-    "stylelint": "^14.12.0",
+    "stylelint": "^14.12.1",
     "stylelint-config-recommended-scss": "^7.0.0",
     "stylelint-scss": "^4.3.0",
     "terser-webpack-plugin": "^5.3.6",
