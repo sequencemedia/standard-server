@@ -85,7 +85,7 @@
     "chai": "^4.3.6",
     "cheerio": "1.0.0-rc.3",
     "clean-webpack-plugin": "^4.0.0",
-    "concurrently": "^7.4.0",
+    "concurrently": "^7.5.0",
     "core-js": "^3.25.5",
     "cssnano": "^5.1.13",
     "enzyme": "^3.11.0",
