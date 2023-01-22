@@ -41,7 +41,7 @@
     "pre-commit": "npm run lint && npm run test && npm run build && npm run transform && git add public server/views"
   },
   "dependencies": {
-    "@babel/runtime": "^7.20.7",
+    "@babel/runtime": "^7.20.13",
     "@hapi/boom": "^10.0.0",
     "@hapi/hapi": "^21.2.0",
     "@hapi/inert": "^7.0.0",
