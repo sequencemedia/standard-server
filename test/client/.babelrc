@@ -1,7 +1,8 @@
 {
   "presets": [
     [
-      "@babel/env", {
+      "@babel/env",
+      {
         "targets": {
           "node": "current",
           "browsers": [
@@ -30,8 +31,11 @@
       }
     ],
     [
-      "module-resolver", {
-        "root": ["../.."],
+      "module-resolver",
+      {
+        "root": [
+          "../.."
+        ],
         "cwd": "babelrc",
         "alias": {
           "~": "../..",
