@@ -63,7 +63,7 @@
     "react-tab-set": "^1.1.299",
     "redux": "^4.2.1",
     "redux-saga": "^1.2.2",
-    "sass": "^1.58.0",
+    "sass": "^1.58.1",
     "uuid": "^9.0.0"
   },
   "devDependencies": {
