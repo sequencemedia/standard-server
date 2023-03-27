@@ -115,7 +115,7 @@
     "postcss": "^8.4.21",
     "postcss-normalize": "^10.0.1",
     "postcss-scss": "^4.0.6",
-    "sinon": "^15.0.2",
+    "sinon": "^15.0.3",
     "sinon-chai": "^3.7.0",
     "stylelint": "^15.3.0",
     "stylelint-config-recommended-scss": "^9.0.1",
