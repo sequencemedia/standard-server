@@ -122,7 +122,7 @@
     "stylelint-scss": "^4.6.0",
     "terser-webpack-plugin": "^5.3.7",
     "vinyl-paths": "3.0.1",
-    "webpack": "^5.80.0",
+    "webpack": "^5.81.0",
     "webpack-cli": "^5.0.2",
     "webpack-merge": "^5.8.0"
   },
