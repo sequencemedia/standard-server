@@ -36,7 +36,7 @@
     "test": "npm run test:mocha # npm run test:jest && npm run test:mocha",
     "test:jest": "cross-env NODE_ENV=test NODE_OPTIONS=\"--no-warnings --experimental-vm-modules\" jest --verbose --run-in-band",
     "test:mocha": "cross-env NODE_ENV=test mocha -b --recursive test/server",
-    "gulp": "npm run nvm && gulp --color",
+    "gulp": "gulp --color",
     "nvm": "bash nvm.sh",
     "prepare": "husky install"
   },
