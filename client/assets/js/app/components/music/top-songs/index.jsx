@@ -1,0 +1,79 @@
+import debug from 'debug'
+
+import {
+  connect
+} from 'react-redux'
+
+import {
+  withRouter
+} from 'react-router'
+
+import {
+  change,
+  changeOrder,
+  latest,
+  latestOrder
+} from '#client/app/actions/music/top-songs'
+
+import {
+  TOP_SONGS
+} from '#client/app/constants/feed-type'
+
+import transform from '#client/app/transformers/order'
+
+import Component from './component.jsx'
+
+const log = debug('@sequencemedia:client:app:components:music:top-songs')
+
+log('`topSongs` is awake')
+
+function mapStateToProps ({ [TOP_SONGS]: topSongs = {} }) {
+  log('mapStateToProps')
+
+  return topSongs
+}
+
+function mapDispatchToProps (dispatch) {
+  log('mapDispatchToProps')
+
+  return { dispatch }
+}
+
+function mergeProps (stateProps, { dispatch }, ownProps) {
+  log('mergeProps')
+
+  const {
+    items = []
+  } = stateProps
+
+  const {
+    match: {
+      params: {
+        feedType,
+        order
+      }
+    }
+  } = ownProps
+
+  return {
+    ...stateProps,
+    onMount (feedType) {
+      dispatch(change(feedType))
+    },
+    onMountOrderBy (feedType, order) {
+      dispatch(changeOrder(feedType, order))
+    },
+    onClickLatest (feedType) {
+      dispatch(latest(feedType))
+    },
+    onClickLatestOrderBy (feedType, order) {
+      dispatch(latestOrder(feedType, order))
+    },
+    ...ownProps,
+    items: transform(order, items),
+    feedType,
+    order
+  }
+}
+
+export default withRouter(connect(mapStateToProps, mapDispatchToProps, mergeProps)(Component))

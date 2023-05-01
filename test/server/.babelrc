@@ -19,20 +19,6 @@
       {
         "loose": false
       }
-    ],
-    [
-      "module-resolver",
-      {
-        "root": [
-          "../.."
-        ],
-        "cwd": "babelrc",
-        "alias": {
-          "~": "../..",
-          "@sequencemedia/api": "../../client/assets/js/api",
-          "@sequencemedia/app": "../../client/assets/js/app"
-        }
-      }
     ]
   ]
 }

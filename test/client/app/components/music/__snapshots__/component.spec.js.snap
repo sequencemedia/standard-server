@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`@sequencemedia/app/components/music/component <Component /> With \`selectedTab\` prop \`COMING_SOON\` renders 1`] = `
+exports[`#client/app/components/music/component <Component /> With \`selectedTab\` prop \`COMING_SOON\` renders 1`] = `
 <MockTabSet
   onChange={[Function]}
   selectedTab="MOCK TOP ALBUMS"
@@ -70,7 +70,7 @@ exports[`@sequencemedia/app/components/music/component <Component /> With \`sele
 </MockTabSet>
 `;
 
-exports[`@sequencemedia/app/components/music/component <Component /> With \`selectedTab\` prop \`HOT_TRACKS\` renders 1`] = `
+exports[`#client/app/components/music/component <Component /> With \`selectedTab\` prop \`HOT_TRACKS\` renders 1`] = `
 <MockTabSet
   onChange={[Function]}
   selectedTab="MOCK TOP ALBUMS"
@@ -140,7 +140,7 @@ exports[`@sequencemedia/app/components/music/component <Component /> With \`sele
 </MockTabSet>
 `;
 
-exports[`@sequencemedia/app/components/music/component <Component /> With \`selectedTab\` prop \`NEW_RELEASES\` renders 1`] = `
+exports[`#client/app/components/music/component <Component /> With \`selectedTab\` prop \`NEW_RELEASES\` renders 1`] = `
 <MockTabSet
   onChange={[Function]}
   selectedTab="MOCK TOP ALBUMS"
@@ -210,7 +210,7 @@ exports[`@sequencemedia/app/components/music/component <Component /> With \`sele
 </MockTabSet>
 `;
 
-exports[`@sequencemedia/app/components/music/component <Component /> With \`selectedTab\` prop \`TOP_ALBUMS\` renders 1`] = `
+exports[`#client/app/components/music/component <Component /> With \`selectedTab\` prop \`TOP_ALBUMS\` renders 1`] = `
 <MockTabSet
   onChange={[Function]}
   selectedTab="MOCK TOP ALBUMS"
@@ -280,7 +280,7 @@ exports[`@sequencemedia/app/components/music/component <Component /> With \`sele
 </MockTabSet>
 `;
 
-exports[`@sequencemedia/app/components/music/component <Component /> With \`selectedTab\` prop \`TOP_SONGS\` renders 1`] = `
+exports[`#client/app/components/music/component <Component /> With \`selectedTab\` prop \`TOP_SONGS\` renders 1`] = `
 <MockTabSet
   onChange={[Function]}
   selectedTab="MOCK TOP ALBUMS"
@@ -350,7 +350,7 @@ exports[`@sequencemedia/app/components/music/component <Component /> With \`sele
 </MockTabSet>
 `;
 
-exports[`@sequencemedia/app/components/music/component <Component /> With required props renders 1`] = `
+exports[`#client/app/components/music/component <Component /> With required props renders 1`] = `
 <MockTabSet
   onChange={[Function]}
   selectedTab="MOCK TOP ALBUMS"

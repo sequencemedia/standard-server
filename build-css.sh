@@ -2,8 +2,6 @@
 
 set -e
 
-source nvm.sh
-
-npx gulp build:css
+npm run build:css
 
 exit 0

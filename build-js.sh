@@ -2,8 +2,6 @@
 
 set -e
 
-source nvm.sh
-
-npx webpack
+npm run build:js
 
 exit 0

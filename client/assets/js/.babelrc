@@ -29,19 +29,6 @@
       {
         "loose": false
       }
-    ],
-    [
-      "module-resolver",
-      {
-        "root": [
-          ".."
-        ],
-        "cwd": "babelrc",
-        "alias": {
-          "@sequencemedia/api": "./api",
-          "@sequencemedia/app": "./app"
-        }
-      }
     ]
   ]
 }

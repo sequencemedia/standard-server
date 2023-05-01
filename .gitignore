@@ -9,8 +9,5 @@
 # User-defined NVM configuration
 .nvmrc
 
-# Coverage
-coverage
-
 # Deps
 .depsrc
