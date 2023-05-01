@@ -21,11 +21,11 @@
     "build:icons": "npm run nvm && NODE_ENV=development npm run gulp -- build:icons",
     "build:js": "npm run nvm && NODE_ENV=development webpack --config webpack.dev.mjs",
     "build:css": "npm run nvm && NODE_ENV=development npm run gulp -- build:css",
-    "watch": "NODE_ENV=development npm run gulp -- watch",
-    "watch:fonts": "NODE_ENV=development npm run gulp -- watch:fonts",
-    "watch:icons": "NODE_ENV=development npm run gulp -- watch:icons",
-    "watch:js": "NODE_ENV=development npm run build:js -- --watch",
-    "watch:css": "NODE_ENV=development npm run gulp -- watch:css",
+    "watch": "npm run nvm && NODE_ENV=development npm run gulp -- watch",
+    "watch:fonts": "npm run nvm && NODE_ENV=development npm run gulp -- watch:fonts",
+    "watch:icons": "npm run nvm && NODE_ENV=development npm run gulp -- watch:icons",
+    "watch:js": "npm run nvm && NODE_ENV=development npm run build:js -- --watch",
+    "watch:css": "npm run nvm && NODE_ENV=development npm run gulp -- watch:css",
     "transform": "npm run gulp -- transform",
     "lint": "npm run lint:js && npm run lint:css",
     "lint:fix": "npm run lint:js:fix && npm run lint:css:fix",
@@ -37,7 +37,8 @@
     "test:jest": "cross-env NODE_ENV=test NODE_OPTIONS=\"--no-warnings --experimental-vm-modules\" jest --verbose --run-in-band",
     "test:mocha": "cross-env NODE_ENV=test mocha -b --recursive test/server",
     "gulp": "npm run nvm && gulp --color",
-    "nvm": "bash nvm.sh"
+    "nvm": "bash nvm.sh",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@babel/runtime": "^7.21.5",
