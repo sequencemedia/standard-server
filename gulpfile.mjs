@@ -24,7 +24,7 @@ import {
 
 const clientPath = path.resolve('./client')
 const serverPath = path.resolve('./server')
-const appPath = path.resolve('./app.js')
+const mainPath = path.resolve('./main.mjs')
 
 gulp
   .task('clean:fonts', cleanFonts)
@@ -74,13 +74,13 @@ gulp
       .watch([
         clientPath.concat('/**/*'),
         serverPath.concat('/**/*'),
-        appPath
+        mainPath
       ], { name: 'server-watch' }, gulp.series('build', 'server-restart'))
       .on('error', handleError)
   ))
 
 gulp
-  .task('server-listen', (next) => server.listen({ path: appPath, args: process.argv.slice(2), execArgs: ['--harmony', '--colors'] }, next))
+  .task('server-listen', (next) => server.listen({ path: mainPath, args: process.argv.slice(2), execArgs: ['--harmony', '--colors'] }, next))
 
 gulp
   .task('default', gulp.parallel('server-watch', 'server-listen'))
