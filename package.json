@@ -1,6 +1,6 @@
 {
   "name": "@sequencemedia/standard-server",
-  "version": "1.1.21",
+  "version": "1.1.22",
   "description": "Standard Server",
   "private": true,
   "main": "./main.mjs",
